@@ -1,0 +1,1493 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- 下載字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <!-- link AOS   -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- link animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <title>個人專題試切</title>
+</head>
+
+<style>
+    body {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    /* html {
+        scroll-behavior: smooth;
+    } */
+
+
+
+    /* <!---------------------- BANNER CSS -------------------------------------> */
+    .bannerArea {
+        position: relative;
+    }
+
+    .bannerTitle {
+        color: rgb(207, 136, 95);
+        white-space: pre;
+        position: absolute;
+
+        top: 450px;
+        left: 400px;
+        font-size: 60px;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 3px;
+
+        animation-name: fromLeft;
+        animation-duration: 1.5s;
+        animation-delay: .1s;
+    }
+
+    @keyframes fromLeft {
+        0% {
+            transform: translateX(-800px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .bannerTitle2 {
+        color: gray;
+        position: absolute;
+
+        top: 535px;
+        left: 435px;
+
+        font-size: 30px;
+        letter-spacing: 22px;
+
+        animation-name: fade;
+        animation-duration: 3s;
+        animation-delay: 0s;
+    }
+
+    .bannerText {
+        color: #85a392;
+
+        position: absolute;
+
+        top: 580px;
+        left: 400px;
+
+        font-size: 40px;
+        letter-spacing: 22px;
+
+
+        animation-name: fade;
+        animation-duration: 3s;
+        animation-delay: 0s;
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    @media(max-width:1200PX) {
+        .banner {
+            background-image: url(./img/banner02.jpg);
+            background-position: center;
+        }
+
+        .bannerTitle {
+            left: calc(50% - 211px);
+            color: white;
+        }
+
+        .bannerTitle2 {
+            left: calc(50% - 180px);
+            color: rgb(207, 136, 95);
+        }
+
+        .bannerText {
+            left: calc(50% - 217px);
+            color: white;
+        }
+    }
+
+    @media(max-width:768px) {
+        .banner {
+            background-image: url(./img/banner03.jpg);
+            background-position: center;
+        }
+
+        .bannerTitle {
+            font-size: 50px;
+            left: calc(50% - 150px);
+            letter-spacing: 0px;
+            color: white;
+        }
+
+        .bannerTitle2 {
+            color: #85a392;
+            font-size: 25px;
+            left: calc(50% - 148px);
+
+        }
+
+        .bannerText {
+            font-size: 30px;
+            left: calc(50% - 132px);
+            letter-spacing: 12px;
+            color: white;
+        }
+    }
+
+    @media(max-width:576px) {
+        .banner {
+            background-image: url(./img/banner03.jpg);
+            background-position: center;
+        }
+    }
+
+    header {
+        margin-bottom: 50px;
+    }
+
+
+    .scrollPic {
+        position: absolute;
+        left: calc(50% - 50px);
+        bottom: 0px;
+
+        width: 100px;
+        height: 200px;
+    }
+
+    .scrollPic img {
+        opacity: 0.5;
+        height: 50%;
+
+
+        animation-name: scroll;
+        animation-duration: 1.5s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .hideScroll {
+        opacity: 0;
+        transition: .3s;
+    }
+
+    @keyframes scroll {
+        0% {
+
+            transform: translateY(0);
+        }
+
+
+        50% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* <!---------------------- NAV BAR CSS -------------------------------------> */
+    #navSection {
+        position: relative;
+    }
+
+    .sticky {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        transition: .3s;
+        z-index: 900;
+        /* padding: 5px ; */
+        /* height: 100px; */
+
+    }
+
+    .navbar {
+        background-color: #000000 !important;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .showNav {
+        opacity: 0.7;
+        transition: 1s;
+    }
+
+    .logo-top img {
+        height: 55px;
+        opacity: 0.5;
+        background-color: white;
+        border-radius: 5%;
+    }
+
+    .hamberger {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        background-image: url('./img/menu.png');
+        background-position: center;
+        background-size: cover;
+        border-radius: 5%;
+        opacity: 0.5;
+    }
+
+    .nav-item {
+        margin-left: 15px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        color: rgb(255, 255, 255) !important;
+        transition: .5s;
+
+    }
+
+    ul>li:hover a {
+        transition: .3s;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(192, 48, 37) !important;
+        transition: .5s;
+    }
+
+    @media(max-width: 992px) {
+        .nav-link {
+            text-align: right;
+        }
+
+    }
+
+
+
+    /* <!---------------------- -----------課程種類 CSS-------------------------------------> */
+
+    #course-type-section {
+        padding: 80px 0;
+        margin: 0 0 50px 0;
+        position: relative;
+    }
+
+    .color {
+        top: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
+        opacity: 0.7;
+    }
+
+    .course-type1 {
+        padding: 50px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+
+    }
+
+    .course-type1 img {
+        width: 70%;
+        overflow: hidden;
+        position: relative;
+        transition: ease-in-out .4s;
+        border-radius: 50%;
+        border: rgb(255, 255, 255) 3px dashed;
+        box-shadow: rgb(233, 233, 233) 0px 0px  20px ;
+    }
+
+    .course-type1 h1 {
+        font-size: 25px;
+        font-weight: 800;
+        width: 50%;
+        height: 100%;
+        line-height: 200px;
+        /* background-color:white; */
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(25%);
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        text-shadow: rgb(41, 41, 41) 4px -4px 4px;
+
+        transition: ease-in-out .4s;
+    }
+
+    .course-type1:hover img {
+        transform: scale(1.1);
+        transition: ease-in-out .4s;
+    }
+
+    .course-type1:hover h1 {
+
+        visibility: visible;
+        opacity: 0.8;
+        transition: ease-in-out .4s;
+    }
+
+    @media(max-width: 767px) {
+        .course-type1 img {
+            width: 50%;
+        }
+
+    }
+
+    /* <!---------------------- -----------新娘捧花 CSS -------------------------------------> */
+
+    #bride-section .bac-block2 {
+        margin: auto 0;
+    }
+
+    #bride-section .bac-block1 {
+        margin: auto 0;
+    }
+
+    .bac-block1 .bac-img1 {
+        width: 100%;
+        transition: 1s;
+
+    }
+
+    .img-title {
+        background-color: rgb(0, 0, 0);
+
+        padding: 10px;
+        position: absolute;
+        left: calc(50% - 90px);
+        margin-top: 300px;
+        font-size: 20px;
+        transition: .4s;
+        color: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+
+    .bac-block1:hover .img-title {
+        opacity: 0.5;
+        transition: .4s;
+    }
+
+
+    .bac-block2 h1 {
+        font-size: 28px;
+        border-bottom: tomato solid 3px;
+        letter-spacing: 5px;
+        display: inline;
+        transition: 2s;
+    }
+
+    .bac-block2 p {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-align: justify;
+    }
+
+    /* read more */
+    .read-more-state {
+        display: none;
+    }
+
+    .read-more-target {
+        opacity: 0;
+        max-height: 0;
+        font-size: 0;
+        transition: .25s ease;
+    }
+
+    .read-more-state:checked~.read-more-wrap .read-more-target {
+        opacity: 1;
+        font-size: inherit;
+        max-height: 999em;
+    }
+
+    .read-more-state~.read-more-trigger:before {
+        content: 'Show more';
+    }
+
+    .read-more-state:checked~.read-more-trigger:before {
+        content: 'Show less';
+    }
+
+    .read-more-trigger {
+        cursor: pointer;
+        background-color: rgb(94, 206, 191);
+        display: inline-block;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        line-height: 25px;
+        border-radius: 20px;
+    }
+
+
+    /* <!---------------------- -----------永生花盅 CSS -------------------------------------> */
+    #forever-section .bac-block2 {
+        margin: auto;
+    }
+
+    .bac-block1 .bac-img2 {
+        width: 100%;
+        transition: 1s;
+        margin: 0 auto;
+    }
+
+    @media(max-width: 768px) {
+        #forever-section .reverse {
+            display: flex;
+            flex-direction: column-reverse
+        }
+
+        #bride-section .bac-block2 {
+            margin-top: 20px;
+        }
+
+        #forever-section .bac-block2 {
+            margin-top: 20px;
+        }
+    }
+
+    /* <!---------------------- -----------Parallax CSS -------------------------------------> */
+    #para-section {
+        margin-top: 100px;
+    }
+
+    .para {
+        width: 100%;
+        height: 60vh;
+        position: relative;
+        background-attachment: fixed;
+    }
+
+    .para-text {
+
+        position: absolute;
+        left: calc(50% - 120px);
+        top: calc(50% - 120px);
+
+        color: white;
+        font-size: 30px;
+        letter-spacing: 10px;
+        opacity: 0.7;
+    }
+
+    .para-title {
+        position: absolute;
+        left: calc(50% - 155px);
+        top: calc(50% - 47px);
+        padding: 15px;
+
+        color: white;
+        font-size: 50px;
+        border: rgb(247, 247, 247) solid 2px;
+        letter-spacing: 20px;
+
+
+    }
+
+    .para-block {
+        overflow: hidden;
+    }
+
+    .para-img {
+
+        width: 100%;
+        height: 60vh;
+
+    }
+
+    @media(max-width: 1200px) {
+        #para-section {
+            margin-top: 80px;
+        }
+    }
+
+    @media(max-width: 767px) {
+        #para-section {
+            margin-top: 30px;
+        }
+    }
+
+
+    /* <!---------------------- -----------12星座 CSS -------------------------------------> */
+
+
+
+
+    /* -----------------------------------Louise CSS--------------------------------------------- */
+    #louise-section .title-bar {
+        margin-top: 150px;
+        margin-bottom: 120px;
+    }
+
+
+    #louise-section .title-bar span {
+        text-transform: uppercase;
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: rgb(155, 155, 155);
+        opacity: 0.3;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    #louise-section .title-bar h4 {
+        font-size: 55px;
+        font-weight: 900;
+        font-family: 'Noto Sans TC', sans-serif;
+        letter-spacing: 15px;
+        color: rgb(36, 36, 36);
+        opacity: 0.7;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 45px;
+        z-index: 2;
+    }
+
+    .louise-info h1 {
+        text-transform: uppercase;
+        color: rgb(245, 183, 126);
+        font-size: 40px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 900;
+        letter-spacing: 15px;
+        text-align: center;
+        /* padding-left: 170px; */
+        margin-bottom: 50px;
+    }
+
+    .louise-info p {
+        text-align: center;
+        color: rgb(139, 139, 139);
+        font-size: 16px;
+        font-family: 'Noto Sans TC', sans-serif;
+        /* padding-left: 150px; */
+        margin: 20px;
+    }
+
+    @media(max-width: 991px) {
+        .louise-info h1 {
+            font-size: 28px;
+            letter-spacing: 8px;
+        }
+
+        .louise-info p {
+            font-size: 14px;
+            margin: 5px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .louise-info h1 {
+            margin-top: 30px;
+        }
+
+        #louise-section .title-bar {
+            margin-bottom: 50px;
+        }
+
+        #louise-section .title-bar span {
+            font-size: 50px;
+        }
+
+        #louise-section .title-bar h4 {
+            font-size: 30px;
+        }
+    }
+
+
+    /* -----------------------------------Teachers  CSS--------------------------------------------- */
+    #teachers {
+        margin-bottom: 150px;
+        margin-top: 50px;
+    }
+
+    .teacher-title h4 {
+        padding: 80px 0 50px 0;
+        font-size: 45px;
+        letter-spacing: 20px;
+        font-weight: 900;
+        color: #242424;
+        opacity: 0.5;
+    }
+
+    .teacher-block {
+        overflow: hidden;
+    }
+
+    .teacher-block img {
+        max-width: 100%;
+        height: auto;
+        transition: 1s;
+        opacity: 1;
+
+    }
+
+    .teacher-info {
+        /* 讓文字在圖片底部 */
+        position: absolute;
+        bottom: 0;
+        padding: 5px 15px;
+        /* div本身有左右15的padding  所以定位lefte跟right可以讓背景顏色長滿 */
+        background-color: rgb(0, 0, 0, 0.5);
+        left: 15px;
+        right: 15px;
+        text-align: left;
+        opacity: 0;
+
+
+        transition: ease-in-out .4s;
+    }
+
+    .teacher-info span {
+        color: white;
+        font-size: 16px;
+
+    }
+
+    .teacher-info h4 {
+        color: white;
+        font-size: 28px;
+        padding-left: 70px;
+    }
+
+    .teacher-hover:hover .teacher-info {
+        transition: ease-in-out .4s;
+        opacity: 0.7;
+    }
+
+    .teacher-hover .teacher-block:hover img {
+        opacity: 0.8;
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    @media(max-width: 768px) {
+        #teachers {
+            margin-top: 30px;
+        }
+
+        .teacher-title h4 {
+            font-size: 35px;
+        }
+    }
+
+    /* ------------------------------------------contact us CSS----------------------------------------- */
+    #contact-section {
+        margin-bottom: 100px;
+    }
+
+    .contact-section .title h2 {
+        font-size: 30px;
+        font-weight: 500;
+        margin: 30px 0 5px 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        border-bottom: rgb(221, 109, 89) 5px solid;
+        display: inline;
+    }
+
+
+
+    .title p {
+        margin: 0;
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        color: #636363;
+        padding-top: 10px;
+    }
+
+    .icon {
+        overflow: hidden;
+    }
+
+    .icon img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    .location h4 {
+        font-size: 28px;
+        color: rgb(49, 49, 49);
+        font-weight: 700;
+    }
+
+    .location p {
+        font-size: 20px;
+        color: rgb(172, 172, 172);
+    }
+
+    @media(max-width: 992px) {
+        .contact-section .title h2 {
+            font-size: 25px;
+        }
+
+        .title p {
+            font-size: 25px;
+        }
+
+        .icon img {
+            max-width: 30%;
+        }
+
+        .location h4 {
+            font-size: 25px;
+        }
+
+        .location p {
+            font-size: 18px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .icon img {
+            max-width: 30%;
+        }
+    }
+
+    /* ------------------------------------表格CSS------------------------------------------- */
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        border-radius: 5px;
+        /* background-color: #f2f2f2; */
+        padding: 20px;
+    }
+
+    #submit-form h4 {
+        font-size: 30px;
+        color: rgb(221, 109, 89);
+        font-weight: 600;
+    }
+
+    #submit-form option {
+        font-size: 18px;
+    }
+
+    /* ------------------------------------------提交視窗事件 CSS----------------------------------------- */
+    .window {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 300px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .window-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        text-align: center;
+
+        font-size: 15px;
+        font-weight: 700;
+        color: rgb(224, 135, 135);
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #submit-form ::-webkit-input-placeholder {
+        color: rgb(192, 192, 192);
+        font-size: 18px;
+
+    }
+
+    /* -----------------------------------------footer  CSS------------------------------------------- */
+    .background {
+        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
+        width: 100%;
+    }
+
+    .icon-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: lightcoral; */
+    }
+
+    .box {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .box img {
+        max-width: 50%;
+        height: auto;
+        transition: ease-in-out;
+        opacity: 0.7;
+    }
+
+    .box:hover img {
+        animation: heart .5s linear;
+        transition: ease-in-out;
+        animation-iteration-count: infinite;
+        /* opacity: 0.7; */
+
+    }
+
+    @keyframes heart {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .open {
+        padding: 60px;
+        text-align: center;
+
+    }
+
+    .open h4 {
+        color: white;
+        font-size: 25px;
+        font-weight: 900;
+        letter-spacing: 5px;
+        padding: 15px;
+        /* border: solid; */
+
+
+    }
+
+    .open span {
+        color: rgb(10, 10, 10);
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 3px;
+
+    }
+
+    .logo-position {
+        text-align: center;
+        line-height: 250px;
+    }
+
+    .logo-wrap {
+        /* width: 20%; */
+        overflow: hidden;
+    }
+
+    .logo-wrap img {
+        max-width: 20%;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .background .box {
+        text-align: center;
+    }
+
+    @media(max-width: 1200px) {
+        .open span {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .background {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .open {
+            padding: 30px;
+        }
+
+        .logo-wrap {
+            width: 80%;
+            line-height: 180px; 
+        }
+        
+        .box img {
+            max-width: 35%;
+            padding: 60px 0;
+        }
+        
+    }
+
+    #copyright {
+        width: 100%;
+        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
+        padding: 20px;
+        color: rgb(48, 48, 48);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    #copyright .gototop{
+        width:80px;
+        height: 80px;
+        position: fixed;
+        right: 100px;
+        bottom:300px;
+    }
+    .gototop img{
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+
+
+
+    <!---------------------- banner ------------------------------------->
+    <div class="bannerArea ">
+        <h1 class="bannerTitle">Louise Flower</h1>
+        <h2 class="bannerTitle2"> 露易絲花藝課程</h2>
+        <span class="bannerText">我足以與妳匹配</span>
+        <div class="scrollPic">
+            <a data-easing="easeInOutQuint" data-scroll href="#course-type-section"> <img src="/img/scroll.png" alt="">
+            </a>
+        </div>
+        <div class="banner" style="width: 100%;height: 100vh;" data-parallax="scroll"
+            data-image-src="/img/banner01.jpg"></div>
+    </div>
+
+
+
+    <!---------------------- nav bar ------------------------------------->
+    <section id="navSection">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div class="container" style="padding: 5px;">
+                <!-- LOGO -->
+                <a data-easing="easeInOutQuint" data-scroll class="logo-top" href="#"> <img src="/img/LOGO.png" alt="">
+                </a>
+
+                <!-- 漢堡條 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent">
+                    <div class="hamberger"></div>
+                </button>
+
+                <!-- LOGO右邊的整個NAV橫條 -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#course-type-section">課程類別</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bride-section">新娘捧花課程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#forever-section">永生花課程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">星座花束課程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#louise-section">師資陣容</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#contact-section">聯絡我們</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+    </section>
+
+
+    <main>
+        <!---------------------- ---------------------課程種類 ------------------------------------------------>
+
+        <section id="course-type-section">
+            <div class="color"></div>
+            <div class="container-fluid  d-flex justify-content-around  flex-wrap flex-md-nowrap">
+                <div class="course-type1  col-12 col-md-4  ">
+                    <img class=" " src="/img/flower01.jpg" alt="">
+                    <h1>新娘捧花</h1>
+                </div>
+                <div class="course-type1 col-12 col-md-4">
+                    <a href=""> <img src="/img/forever01.jpg" alt=""> </a>
+                    <h1>永生花盅</h1>
+                </div>
+                <div class="course-type1 col-12 col-md-4">
+                    <img src="/img/flower05.jpeg" alt="">
+                    <h1>星座花束</h1>
+                </div>
+            </div>
+        </section>
+        <!---------------------- ---------------------  新娘捧花 ------------------------------------------------>
+        <section id="bride-section" style="margin-bottom: 50PX;">
+            <div class="container">
+                <div class="row p-0 m-0 ">
+                    <div class="bac-block1 col-12 col-md-7 p-0" data-aos="fade-up" data-aos-duration="1000">
+                        <img class="bac-img1" src="/img/flower10.jpg" alt="">
+                    </div>
+
+                    <div class="bac-block2 col-9 col-md-5 text-center mx-auto" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <h1>新娘捧花系列課程</h1>
+                        <input type="checkbox" class="read-more-state" id="post-1" />
+                        <p class="read-more-wrap p-5 p-lg-40 ">
+                            從花材的認識、挑選以及採購，一直到各種新娘捧花的編排和編輯技巧，老師們都會一步一步引導同學如何從無到有編織出屬於同學們自己的新娘捧花。
+                            <span
+                                class="read-more-target">新娘捧花可從外型、花材的選擇來呈現出不同的風格。課程上除了按部就班的教學之外，老師們也會告訴各位同學與新娘捧花相關的小知識喔!
+                                當然，各種花材的花與以及適合的搭配技巧，老師們都會不離餘地的傳授給各位同學。讓每一位同學都能編織出屬於自己心目中最完美的幸福花束。</span>
+                        </p>
+                        <label for="post-1" class="read-more-trigger "></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------------------- --------------------- 永生花盅 ------------------------------------------------>
+        <section id="forever-section">
+            <div class="container">
+                <div class="row p-0 m-0 reverse ">
+                    <div class="bac-block2 col-9 col-md-5 text-center mx-auto" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <h1>永生花盅系列課程</h1>
+                        <input type="checkbox" class="read-more-state" id="post-2" />
+                        <p class="read-more-wrap p-5 p-lg-40 ">
+                            不雕花有很多形容它的名子，在近期，人們給了他一另一個很美麗稱號，叫做永生花。
+                            <span
+                                class="read-more-target">不管是不雕花，還是永生花，我們都讚賞它的美，製作過程都相當的費工。無毒的色素及保鮮劑，花材還要精挑細選才匹配的上。也因此，讓永生花顯得更加的珍貴。</span>
+                        </p>
+                        <label for="post-2" class="read-more-trigger "></label>
+                    </div>
+
+                    <div class="bac-block1 col-12 col-md-7 p-0 " style="text-align: right;" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <img class="bac-img2" src="/img/gallery17.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---------------------- --------------------- Parallax------------------------------------------------>
+        <section id="para-section">
+            <div class="para">
+                <div class="para-text">留下屬於妳的</div>
+                <div class="para-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">永恆美麗
+                </div>
+                <div class="para-block">
+                    <div class="para-img" data-parallax="scroll" data-image-src="/img/para-img.jpg"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!---------------------- --------------------- 12星座系列------------------------------------------------>
+        <!-- ------------------------------------------LOUISE------------------------------------------- -->
+        <section id="louise-section">
+            <div class="title-bar" style="width: 100%; position: relative; text-align:center; padding:30px;">
+                <span>Design Director</span>
+                <h4>花藝設計總監</h4>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6" style="padding-right: 0; padding-left: 0;">
+                        <div class="louise-wrap" data-aos="fade-right" data-aos-duration="1000">
+                            <img src="/img/louise-0.jpg" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 louise-info" style="padding-right: 0; padding-left: 0;"
+                        data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+                        <h1>louise yang</h1>
+                        <p>13年資深花藝設計總監</p>
+                        <p>2008年擔任郭台銘先生婚禮設計及策劃</p>
+                        <p>2009年第二屆中國盃花藝比賽冠軍</p>
+                        <p>2011年榮獲美國Special Evevts世界宴會大賞最佳設計獎</p>
+                        <p>2012年日本花藝設計大賽總冠軍 Japan Flower Design Award</p>
+                        <p>2014年內閣總理大臣獎<br>「羅蕾萊的眼淚—來自海涅詩歌的印象」</p>
+                        <p>2017年厚生勞動大臣獎<br>「抱擁」</p>
+                        <br>
+                        <p>2018年創立Louise Flower公司</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ------------------------------------------Teachers------------------------------------------- -->
+        <section id="teachers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <div class="teacher-title" style="text-align: center;" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <h4>專業師資陣容</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Alice -->
+                    <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
+                        <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <img src="/img/teacher01.jpg" alt="">
+                        </div>
+                        <div class="teacher-info">
+                            <span>花藝設計師</span>
+                            <h4>Alice</h4>
+                        </div>
+                    </div>
+                    <!-- Claire -->
+                    <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
+                        <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                            <img src="/img/teacher06.jpg" alt="">
+                        </div>
+                        <div class="teacher-info">
+                            <span>花藝設計師</span>
+                            <h4>Claire</h4>
+                        </div>
+                    </div>
+                    <!-- Emily -->
+                    <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
+                        <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                            <img src="/img/teacher03.jpg" alt="">
+                        </div>
+                        <div class="teacher-info">
+                            <span>花藝設計師</span>
+                            <h4>Emily</h4>
+                        </div>
+                    </div>
+                    <!-- Grace -->
+                    <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
+                        <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                            <img src="/img/teacher05.jpg" alt="">
+                        </div>
+                        <div class="teacher-info">
+                            <span>花藝設計師</span>
+                            <h4>Grace</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------------------------------------------------ 聯絡我們--------------------------------------- -->
+        <section id="contact-section" class="contact-section">
+            <div class="container">
+                <div class="title">
+                    <h2>CONTACT US</h2>
+                    <p>聯絡我們</p>
+                </div>
+                <div class="row" style="margin-top: 50px;">
+                    <!-- info -->
+                    <div class="col-lg-4">
+                        <div class="row" style="padding-left: 20px;">
+                            <div class="col-2" style="padding-left: 0;padding-right: 0;">
+                                <div class="icon">
+                                    <img class="icon-map" src="/img/map.png" alt="" style="padding-top:10px;">
+                                </div>
+                            </div>
+                            <div class="col-10  location">
+                                <h4>Location</h4>
+                                <p>406台中市北屯區環中路60號</p>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 20px;">
+                            <div class="col-2" style="padding-left: 0;padding-right: 0;">
+                                <div class="icon">
+                                    <img class="icon-email" src="/img/email.png" alt="" style="padding-top:25px;">
+                                </div>
+                            </div>
+                            <div class="col-10  location">
+                                <h4>Email</h4>
+                                <p>louise_course@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 20px;">
+                            <div class="col-2" style="padding-left: 0;padding-right: 0;">
+                                <div class="icon">
+                                    <img class="icon-phone" src="/img/phone.png" alt="" style="padding-top:20px;">
+                                </div>
+                            </div>
+                            <div class="col-10  location">
+                                <h4>Call</h4>
+                                <p>0987-187-187</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 表格 -->
+                    <div class="col-lg-8">
+                        <form id="submit-form">
+                            <h4>報名課程</h4>
+                            <input class="user" type="text" placeholder="姓名  ex: 王曉明" name="user-name">
+                            <br>
+                            <input class="user" type="text" placeholder="信箱  ex: abc@gmail.com" name="user-name">
+                            <br>
+                            <select name="course">
+                                　<option value="course1">新娘捧花課程</option>
+                                　<option value="course1">永生花課程</option>
+                                　<option value="course1">12星座系列花束課程</option>
+                            </select>
+                            <br>
+                            <input id="confirm-window" type="button" onclick="submit()" value="提交"
+                                style="padding: 3px 30px;">
+
+                            <div id="mywindow" class="window">
+                                <!-- Modal content -->
+                                <div class="window-content">
+                                    <span class="close">&times;</span>
+                                    <p style="margin-top: 10px;">報名表已提交!! 露易絲花藝期待與您見面。</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- ------------------------------footer------------------------------------ -->
+        <footer>
+            <div class="row background">
+                <div class="col-12 col-md-4 icon-group" data-aos="fade-down" data-aos-duration="1000"
+                    data-aos-delay="0">
+                    <div class="box">
+                        <a href=""><img src="/img/fb.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="/img/messager.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="/img/line.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="/img/ig.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="/img/google.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 logo-position">
+                    <div class="logo-wrap  mx-auto" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                        <a href=""></a><img src="/img/LOGO.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="open" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                        <h4>OPENING HOURS</h4>
+
+                        <span>Monday - Saturday</span>
+                        <br>
+                        <span>11:00 - 18:00</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer id="copyright" style="position: relative;">Copyright © 2018 Louise Flower Inc. All rights reserved
+            <div class="gototop">
+                <a href="#"><img src="/img/scrollup.png" alt=""></a>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+
+
+    <!--------------------------------- 掛載的東西一定要放在上面  下方寫JS才會動作 ---------------------------->
+
+    <!-- -------------掛載Smooth Scroll-------------- -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!---------------------- Swiper掛載 ------------------------------------->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!---------------------- bootstrap掛載 ------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--------------------------------- Parallax掛載------------------ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/parallax.js-1.5.0/parallax.min.js"></script>
+    <!----------------------   AOS 掛載 ------------------------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!----------------------   AOS初始化 ---------------------->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Swiper 初始化-->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <!-- -----------------------------------Animation Script---------------------------------------- -->
+    <!-- <script>
+        const fromLeft = document.querySelector('.test')
+        fromLeft.classList.add('animated', 'bounceInLeft')
+    </script> -->
+
+    <!-- -----------------------------------NAV Script---------------------------------------- -->
+
+    <script>
+        var navBar = document.querySelector('.navbar')
+
+        window.onscroll = function () {
+            var nowScrollTop_safari = document.body.scrollTop
+            var nowScrollTop_google = document.documentElement.scrollTop
+            var scrollPic = document.querySelector('.scrollPic')
+
+            if (nowScrollTop_safari > 200 || nowScrollTop_google > 200) {
+                navBar.classList.add('showNav')
+                scrollPic.classList.add('hideScroll')
+            }
+            else {
+                navBar.classList.remove('showNav')
+                scrollPic.classList.remove('hideScroll')
+            }
+            if (nowScrollTop_safari > 1262 || nowScrollTop_google > 1262) {
+                navBar.classList.add('sticky')
+            }
+            else {
+                navBar.classList.remove('sticky')
+            }
+        }
+    </script>
+
+    <!-- Initialize Smooth Scroll. -->
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            speedAsDuration: true
+        });
+        var easeInQuad = new SmoothScroll('[data-easing="easeInOutQuint"]', { easing: 'easeInOutQuint' });
+    </script>
+
+
+</body>
+
+</html>
