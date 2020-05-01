@@ -19,7 +19,7 @@
     <!-- link animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    <title>個人專題試切</title>
+    <title>Louise Flower 露易絲花藝課程</title>
 </head>
 
 <style>
@@ -50,14 +50,51 @@
         position: absolute;
 
         top: 450px;
-        left: 400px;
+        left: 245px;
         font-size: 60px;
         font-family: 'Raleway', sans-serif;
         letter-spacing: 3px;
+        z-index: 3;
 
         animation-name: fromLeft;
         animation-duration: 1.5s;
-        animation-delay: .1s;
+        animation-delay: .3s;
+    }
+
+
+
+    .bannerTitle2 {
+        color: gray;
+        position: absolute;
+
+        top: 535px;
+        left: 280px;
+
+        font-size: 30px;
+        letter-spacing: 22px;
+        z-index: 3;
+
+        animation-name: fromLeft;
+        animation-duration: 1.5s;
+        animation-delay: .3s;
+    }
+
+    .bannerText {
+        color: #85a392;
+
+        position: absolute;
+
+        top: 250px;
+        left: 250px;
+
+        font-size: 40px;
+        letter-spacing: 22px;
+        z-index: 3;
+
+
+        animation-name: fade;
+        animation-duration: 4s;
+        animation-delay: 0s;
     }
 
     @keyframes fromLeft {
@@ -68,38 +105,6 @@
         100% {
             transform: translateX(0);
         }
-    }
-
-    .bannerTitle2 {
-        color: gray;
-        position: absolute;
-
-        top: 535px;
-        left: 435px;
-
-        font-size: 30px;
-        letter-spacing: 22px;
-
-        animation-name: fade;
-        animation-duration: 3s;
-        animation-delay: 0s;
-    }
-
-    .bannerText {
-        color: #85a392;
-
-        position: absolute;
-
-        top: 580px;
-        left: 400px;
-
-        font-size: 40px;
-        letter-spacing: 22px;
-
-
-        animation-name: fade;
-        animation-duration: 3s;
-        animation-delay: 0s;
     }
 
     @keyframes fade {
@@ -115,6 +120,22 @@
             opacity: 1;
         }
     }
+
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background-image: url(./img/banner01.jpg);
+        background-position: right;
+        background-size: cover;
+        animation-name: fade ;
+        animation-duration: 4s;
+        animation-delay: 0;
+        
+    }
+
+
+
+
 
 
     @media(max-width:1200PX) {
@@ -180,21 +201,22 @@
 
 
     .scrollPic {
+        z-index: 3;
         position: absolute;
         left: calc(50% - 50px);
-        bottom: 0px;
+        bottom: 10px;
 
         width: 100px;
         height: 200px;
     }
 
     .scrollPic img {
-        opacity: 0.5;
+        opacity: 0.3;
         height: 50%;
-
-
+        padding: 10px;
+        
         animation-name: scroll;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
         animation-delay: 0s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
@@ -223,41 +245,30 @@
 
     /* <!---------------------- NAV BAR CSS -------------------------------------> */
     #navSection {
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 3;
     }
 
-    .sticky {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        transition: .3s;
-        z-index: 900;
-        /* padding: 5px ; */
-        /* height: 100px; */
-
+    .nav-opacity {
+        opacity: 0.5;
     }
 
     .navbar {
         background-color: #000000 !important;
-        opacity: 0;
         transition: .5s;
     }
 
-    .showNav {
-        opacity: 0.7;
-        transition: 1s;
-    }
 
     .logo-top img {
-        height: 55px;
-        opacity: 0.5;
+        height: 45px;
         background-color: white;
         border-radius: 5%;
     }
 
     .hamberger {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         background-color: white;
         background-image: url('./img/menu.png');
         background-position: center;
@@ -271,7 +282,7 @@
     }
 
     .nav-link {
-        font-size: 20px;
+        font-size: 16px;
         color: rgb(255, 255, 255) !important;
         transition: .5s;
 
@@ -279,10 +290,12 @@
 
     ul>li:hover a {
         transition: .3s;
-        font-size: 25px;
+        /* font-size: 17px; */
         font-weight: bold;
-        color: rgb(192, 48, 37) !important;
+        color: rgb(0, 0, 0) !important;
         transition: .5s;
+        background-color: #ffffff;
+        border-radius:3px ;
     }
 
     @media(max-width: 992px) {
@@ -330,11 +343,11 @@
         transition: ease-in-out .4s;
         border-radius: 50%;
         border: rgb(255, 255, 255) 3px dashed;
-        box-shadow: rgb(233, 233, 233) 0px 0px  20px ;
+        box-shadow: rgb(233, 233, 233) 0px 0px 20px;
     }
 
     .course-type1 h1 {
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 800;
         width: 50%;
         height: 100%;
@@ -349,7 +362,7 @@
         opacity: 0;
         visibility: hidden;
         z-index: 100;
-        text-shadow: rgb(41, 41, 41) 4px -4px 4px;
+        text-shadow: rgb(41, 41, 41) 0px 0px 4px;
 
         transition: ease-in-out .4s;
     }
@@ -442,22 +455,22 @@
     }
 
     .read-more-state~.read-more-trigger:before {
-        content: 'Show more';
+        content: '閱讀更多';
     }
 
     .read-more-state:checked~.read-more-trigger:before {
-        content: 'Show less';
+        content: '閱讀更少';
     }
 
     .read-more-trigger {
         cursor: pointer;
-        background-color: rgb(94, 206, 191);
+        background-color: rgb(56, 186, 196);
         display: inline-block;
         padding: 10px;
         color: rgb(255, 255, 255);
         font-size: 16px;
         line-height: 25px;
-        border-radius: 20px;
+        border-radius: 5px;
     }
 
 
@@ -487,72 +500,138 @@
         }
     }
 
-    /* <!---------------------- -----------Parallax CSS -------------------------------------> */
-    #para-section {
-        margin-top: 100px;
+
+
+
+    /* <!---------------------- -----------獅子座 CSS -------------------------------------> */
+    #twelve-section {
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 
-    .para {
-        width: 100%;
-        height: 60vh;
+    .twelve {
         position: relative;
-        background-attachment: fixed;
-    }
-
-    .para-text {
-
-        position: absolute;
-        left: calc(50% - 120px);
-        top: calc(50% - 120px);
-
-        color: white;
-        font-size: 30px;
-        letter-spacing: 10px;
-        opacity: 0.7;
-    }
-
-    .para-title {
-        position: absolute;
-        left: calc(50% - 155px);
-        top: calc(50% - 47px);
-        padding: 15px;
-
-        color: white;
-        font-size: 50px;
-        border: rgb(247, 247, 247) solid 2px;
-        letter-spacing: 20px;
-
-
-    }
-
-    .para-block {
         overflow: hidden;
     }
 
-    .para-img {
-
+    .twelve-pic {
         width: 100%;
-        height: 60vh;
+        height: 100vh;
+        background-image: url(./img/flower05.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        transition: ease-in-out 1s;
+    }
+
+    .twelve:hover .twelve-pic {
+        transform: scale(1.1);
+    }
+
+    .twelve-title {
+        position: absolute;
+        top: calc(50% - 117px);
+        left: calc(50% - 140px);
+        text-align: center;
 
     }
 
-    @media(max-width: 1200px) {
-        #para-section {
-            margin-top: 80px;
+    .twelve-title p {
+        font-weight: 600;
+        font-size: 30px;
+        color: white;
+        letter-spacing: 5px;
+    }
+
+    .twelve-title h4 {
+        padding: 10px 0px 10px 18px;
+
+        font-size: 60px;
+        font-weight: 800;
+        color: white;
+        letter-spacing: 20px;
+        border: solid 3px white;
+        background-color: rgb(231, 164, 77);
+        transition: ease-in-out .3s;
+    }
+
+    .twelve-title span {
+        font-weight: 600;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        border: white solid 2px;
+    }
+    /* -----Hover沒作用  問老師: 已解決  把路徑都寫出來即可--------------- */
+        
+        .twelve-title:hover a h4{
+        transition: ease-in-out .3s;
+        /* transform: scale(1.1);         */
+        color: rgb(231, 164, 77);
+        background-color: #ffffff;
+    }
+
+    /* -----------------------------------12星座卡片  CSS--------------------------------------------- */
+    .top-title {
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'Noto Sans TC', sans-serif;
+        letter-spacing: 15px;
+        color: rgb(36, 36, 36);
+        opacity: 0.7;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .card-wrap {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .card-wrap img {
+        max-width: 100%;
+        height: auto;
+        transition: ease-in-out .5s;
+    }
+
+    .card-wrap h4 {
+        position: absolute;
+        top: calc(50% - 34px);
+        left: calc(50% - 56px);
+
+        padding: 10px 20px;
+        font-weight: 600;
+        color: white;
+        background-color: black;
+        opacity: 0.65;
+        transition: ease-in-out .5s;
+
+    }
+
+    .card-wrap:hover img {
+        transform: scale(1.1);
+        transition: ease-in-out .5s;
+    }
+
+    .card-wrap:hover h4 {
+        opacity: 0.15;
+        transition: ease-in-out .5s;
+    }
+
+    @media(max-width:1200px) {
+        .card-wrap h4 {
+            font-size: 18px;
+            padding: 10px 20px;
+            top: calc(50% - 20px);
+            left: calc(50% - 47px);
+        }
+
+        .margin-space {
+            margin-bottom: 30px;
         }
     }
-
-    @media(max-width: 767px) {
-        #para-section {
-            margin-top: 30px;
-        }
-    }
-
-
-    /* <!---------------------- -----------12星座 CSS -------------------------------------> */
-
-
-
 
     /* -----------------------------------Louise CSS--------------------------------------------- */
     #louise-section .title-bar {
@@ -645,7 +724,7 @@
 
     /* -----------------------------------Teachers  CSS--------------------------------------------- */
     #teachers {
-        margin-bottom: 150px;
+        /* margin-bottom: 150px; */
         margin-top: 50px;
     }
 
@@ -719,320 +798,531 @@
         }
     }
 
-    /* ------------------------------------------contact us CSS----------------------------------------- */
-    #contact-section {
+    /* --------------------------------------------學員作品 CSS------------------------------------------------------ */
+    #student {
+        margin-top: 80px;
         margin-bottom: 100px;
+        text-align: center;
     }
 
-    .contact-section .title h2 {
+    .container-student {
+        text-align: center;
+        height: 450px;
+    }
+
+    .student-title {
+        padding: 80px 0 50px 0;
         font-size: 30px;
-        font-weight: 500;
-        margin: 30px 0 5px 0;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #aaaaaa;
-        border-bottom: rgb(221, 109, 89) 5px solid;
-        display: inline;
+        letter-spacing: 10px;
+        font-weight: 900;
+        color: #242424;
+        opacity: 0.5;
     }
 
-
-
-    .title p {
-        margin: 0;
-        margin: 0;
-        font-size: 28px;
-        font-weight: 700;
-        color: #636363;
-        padding-top: 10px;
-    }
-
-    .icon {
-        overflow: hidden;
-    }
-
-    .icon img {
-        max-width: 60%;
-        height: auto;
-    }
-
-    .location h4 {
-        font-size: 28px;
-        color: rgb(49, 49, 49);
-        font-weight: 700;
-    }
-
-    .location p {
+    #student a {
         font-size: 20px;
-        color: rgb(172, 172, 172);
+        text-decoration: none;
+        background-color: black;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        transition: ease-in-out .3s;
+    }
+
+    .student-title-bottom:hover span {
+        color: rgb(214, 151, 79);
+
+        transition: ease-in-out .3s;
     }
 
     @media(max-width: 992px) {
-        .contact-section .title h2 {
-            font-size: 25px;
+        .container-student {
+            height: 600px;
+        }
+        
+    }
+        .slider {
+            width: 100%;
+            
+            position: relative;
+            transition: ease-in-out .3s;
         }
 
+        .student-row:hover .slider {
+            opacity: 0.5;
+            transition: ease-in-out .3s;
+        }
+
+        .photo {
+            width: 100%;
+            height: 170px;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: ease-in-out;
+            animation: change;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+        }
+
+        .photo1 {
+            background-image: url(./img/gallery13.jpg);
+        }
+
+        .photo2 {
+            background-image: url(./img/gallery02.jpg);
+        }
+
+        .photo3 {
+            background-image: url(./img/gallery03.jpg);
+        }
+
+        .photo9 {
+            background-image: url(./img/gallery30.jpg);
+        }
+
+        .photo5 {
+            background-image: url(./img/gallery04.jpg);
+        }
+
+        .photo6 {
+            background-image: url(./img/gallery06.jpg);
+        }
+
+        .photo7 {
+            background-image: url(./img/gallery16.jpg);
+        }
+
+        .photo8 {
+            background-image: url(./img/gallery08.jpg);
+        }
+
+        .photo9 {
+            background-image: url(./img/gallery09.jpg);
+        }
+
+        .photo10 {
+            background-image: url(./img/gallery10.jpg);
+        }
+
+        .photo11 {
+            background-image: url(./img/gallery11.jpg);
+        }
+
+        .photo12 {
+            background-image: url(./img/gallery12.jpg);
+        }
+
+        @keyframes change {
+            10% {
+                opacity: 1;
+            }
+
+            32% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+        }
+        /* @media(max-width: 576px){
+            .photo {
+            width: 100%;
+            height: 140px;
+            }
+        } */
+
+        .slider>.photo:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slider>.photo:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .slider>.photo:nth-child(3) {
+            animation-delay: 10s;
+        }
+
+        /* <!---------------------- -----------Parallax CSS -------------------------------------> */
+        #para-section {
+            margin-top: 100px;
+        }
+
+        .para {
+            width: 100%;
+            height: 60vh;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .para-text {
+
+            position: absolute;
+            left: calc(50% - 120px);
+            top: calc(50% - 120px);
+
+            color: white;
+            font-size: 30px;
+            letter-spacing: 10px;
+            opacity: 0.7;
+        }
+
+        .para-title {
+            position: absolute;
+            left: calc(50% - 155px);
+            top: calc(50% - 47px);
+            padding: 15px;
+
+            color: white;
+            font-size: 50px;
+            border: rgb(247, 247, 247) solid 2px;
+            letter-spacing: 20px;
+
+
+        }
+
+        .para-block {
+            overflow: hidden;
+        }
+
+        .para-img {
+            width: 100%;
+            height: 60vh;
+            background-image: url(./img/para-img.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        @media(max-width: 1200px) {
+            #para-section {
+                margin-top: 80px;
+            }
+        }
+
+        @media(max-width: 767px) {
+            #para-section {
+                margin-top: 30px;
+            }
+            .para-img{
+                height: 50vh; 
+                }
+        }
+
+        /* ------------------------------------------contact us CSS----------------------------------------- */
+        #contact-section {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+
+        .contact-section .title h2 {
+            font-size: 30px;
+            font-weight: 500;
+            margin: 30px 0 5px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaaaaa;
+            border-bottom: rgb(221, 109, 89) 5px solid;
+            display: inline;
+        }
+
+
+
         .title p {
-            font-size: 25px;
+            margin: 0;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #636363;
+            padding-top: 10px;
+        }
+
+        .icon {
+            overflow: hidden;
         }
 
         .icon img {
-            max-width: 30%;
+            max-width: 60%;
+            height: auto;
         }
 
         .location h4 {
-            font-size: 25px;
+            font-size: 28px;
+            color: rgb(49, 49, 49);
+            font-weight: 700;
         }
 
         .location p {
-            font-size: 18px;
-        }
-    }
-
-    @media(max-width: 768px) {
-        .icon img {
-            max-width: 30%;
-        }
-    }
-
-    /* ------------------------------------表格CSS------------------------------------------- */
-    input[type=text],
-    select,
-    textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-
-    }
-
-    input[type=submit] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
-
-    .container {
-        border-radius: 5px;
-        /* background-color: #f2f2f2; */
-        padding: 20px;
-    }
-
-    #submit-form h4 {
-        font-size: 30px;
-        color: rgb(221, 109, 89);
-        font-weight: 600;
-    }
-
-    #submit-form option {
-        font-size: 18px;
-    }
-
-    /* ------------------------------------------提交視窗事件 CSS----------------------------------------- */
-    .window {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 300px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .window-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        text-align: center;
-
-        font-size: 15px;
-        font-weight: 700;
-        color: rgb(224, 135, 135);
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    #submit-form ::-webkit-input-placeholder {
-        color: rgb(192, 192, 192);
-        font-size: 18px;
-
-    }
-
-    /* -----------------------------------------footer  CSS------------------------------------------- */
-    .background {
-        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
-        width: 100%;
-    }
-
-    .icon-group {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background-color: lightcoral; */
-    }
-
-    .box {
-        width: 100%;
-        margin: 5px;
-    }
-
-    .box img {
-        max-width: 50%;
-        height: auto;
-        transition: ease-in-out;
-        opacity: 0.7;
-    }
-
-    .box:hover img {
-        animation: heart .5s linear;
-        transition: ease-in-out;
-        animation-iteration-count: infinite;
-        /* opacity: 0.7; */
-
-    }
-
-    @keyframes heart {
-        0% {
-            transform: scale(1);
+            font-size: 20px;
+            color: rgb(172, 172, 172);
         }
 
-        50% {
-            transform: scale(1.2);
+        @media(max-width: 992px) {
+            .contact-section .title h2 {
+                font-size: 25px;
+            }
+
+            .title p {
+                font-size: 25px;
+            }
+
+            .icon img {
+                max-width: 30%;
+            }
+
+            .location h4 {
+                font-size: 25px;
+            }
+
+            .location p {
+                font-size: 18px;
+            }
         }
 
-        100% {
-            transform: scale(1);
+        @media(max-width: 768px) {
+            .icon img {
+                max-width: 30%;
+            }
         }
-    }
 
-    .open {
-        padding: 60px;
-        text-align: center;
+        /* ------------------------------------表格CSS------------------------------------------- */
 
-    }
-
-    .open h4 {
-        color: white;
-        font-size: 25px;
-        font-weight: 900;
-        letter-spacing: 5px;
-        padding: 15px;
-        /* border: solid; */
-
-
-    }
-
-    .open span {
-        color: rgb(10, 10, 10);
-        font-size: 18px;
-        font-weight: 900;
-        letter-spacing: 3px;
-
-    }
-
-    .logo-position {
-        text-align: center;
-        line-height: 250px;
-    }
-
-    .logo-wrap {
-        /* width: 20%; */
-        overflow: hidden;
-    }
-
-    .logo-wrap img {
-        max-width: 20%;
-        height: auto;
-        opacity: 0.7;
-    }
-
-    .background .box {
-        text-align: center;
-    }
-
-    @media(max-width: 1200px) {
-        .open span {
-            font-size: 16px;
+        .input-shape {
+            width: 350px;
+            height: 40px;
+            border: rgb(78, 168, 241) solid 1px;
+            border-radius: 2px;
         }
-    }
 
-    @media(max-width: 768px) {
+        input::placeholder {
+            color: rgb(179, 179, 179);
+            padding-left: 5px;
+        }
+
+        .course-select {
+            width: 350px;
+            height: 40px;
+            border: rgb(78, 168, 241) solid 1px;
+            border-radius: 2px;
+        }
+
+        .submit-shape {
+            margin-top: 15px;
+            width: 80px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: rgb(78, 168, 241) solid 1px;
+            transition: .3s;
+        }
+
+        .submit-shape:hover {
+            background-color: rgb(142, 192, 233);
+            transition: .3s;
+        }
+
+        /* -----------------------------------------footer  CSS------------------------------------------- */
         .background {
+            background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .icon-group {
             display: flex;
-            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            /* background-color: lightcoral; */
+        }
+
+        .box {
+            width: 100%;
+            margin: 8px;
+        }
+
+        .box img {
+            max-width: 40%;
+            height: auto;
+            transition: ease-in-out;
+            opacity: 0.7;
+        }
+
+        .box:hover img {
+            animation: heart .5s linear;
+            transition: ease-in-out;
+            animation-iteration-count: infinite;
+            /* opacity: 0.7; */
+
+        }
+
+        @keyframes heart {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         .open {
-            padding: 30px;
+            padding:15px;
+            text-align: center;
+        }
+        .open-class{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .open h4 {
+            color: white;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 5px;
+            padding: 10px;
+            /* border: solid; */
+
+
+        }
+
+        .open span {
+            color: rgb(10, 10, 10);
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 3px;
+
+        }
+
+        .logo-position {
+            display: flex;
+            justify-content: center ;
+            align-items: center;
         }
 
         .logo-wrap {
-            width: 80%;
-            line-height: 180px; 
+            width: 60px;
+            height: 75px;
+            overflow: hidden;
         }
-        
-        .box img {
-            max-width: 35%;
-            padding: 60px 0;
+
+        .logo-wrap img {
+            width: 100%;
+            opacity: 0.7;
         }
-        
-    }
 
-    #copyright {
-        width: 100%;
-        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
-        padding: 20px;
-        color: rgb(48, 48, 48);
-        text-align: center;
-        font-size: 16px;
-        font-weight: 800;
-    }
+        .background .box {
+            text-align: center;
+        }
 
-    #copyright .gototop{
-        width:80px;
-        height: 80px;
-        position: fixed;
-        right: 100px;
-        bottom:300px;
-    }
-    .gototop img{
-        max-width: 100%;
-        height: auto;
-    }
+        @media(max-width: 1200px) {
+            .open h4{
+                font-size: 18px;
+            }
+            .open span {
+                font-size: 16px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .background {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .open {
+                padding: 20px;
+            }
+
+            .logo-wrap {
+                width: 60px;
+                height: 75px;
+            }
+
+            .box img {
+                max-width: 35%;
+                padding: 60px 0;
+            }
+
+        }
+
+        #copyright {
+            width: 100%;
+            background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #3c8a8a 75%);
+            padding: 10px;
+            color: rgb(48, 48, 48);
+            text-align: center;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        #copyright .gototop {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+        }
+
+        .gototop img {
+            width: 100%;
+            height: auto;
+            transition: .3s;
+            opacity: 0.6;           
+        }
+        .gototop:hover img{
+            animation-name: scroll;
+            animation-duration: 0.7s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .gototop {
+            opacity: 0;
+        }
+
+        .show-gototop {
+            opacity: 0.6;
+            transition: .3s;
+        }
+
+        @media(max-width: 768px) {
+            #copyright{
+                font-size: 10px;
+            }
+            #copyright .gototop {
+                width: 45px;
+                height: 45px;
+                right: 40px;
+                bottom: 250px;
+            }
+
+        }
+
+        @keyframes scroll {
+            0% {
+
+                transform: translateY(0);
+            }
+
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
 </style>
 
 <body>
@@ -1045,11 +1335,9 @@
         <h2 class="bannerTitle2"> 露易絲花藝課程</h2>
         <span class="bannerText">我足以與妳匹配</span>
         <div class="scrollPic">
-            <a data-easing="easeInOutQuint" data-scroll href="#course-type-section"> <img src="/img/scroll.png" alt="">
-            </a>
+            <a href="#twelve-section"> <img src="./img/scroll.png" alt=""> </a>
         </div>
-        <div class="banner" style="width: 100%;height: 100vh;" data-parallax="scroll"
-            data-image-src="/img/banner01.jpg"></div>
+        <div class="banner"></div>
     </div>
 
 
@@ -1057,9 +1345,9 @@
     <!---------------------- nav bar ------------------------------------->
     <section id="navSection">
         <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-            <div class="container" style="padding: 5px;">
+            <div class="container" >
                 <!-- LOGO -->
-                <a data-easing="easeInOutQuint" data-scroll class="logo-top" href="#"> <img src="/img/LOGO.png" alt="">
+                <a data-easing="easeInOutQuint" data-scroll class="logo-top" href="#"> <img src="./img/LOGO.png" alt="">
                 </a>
 
                 <!-- 漢堡條 -->
@@ -1081,7 +1369,7 @@
                             <a class="nav-link" href="#forever-section">永生花課程</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">星座花束課程</a>
+                            <a class="nav-link" href="#twelve-section">星座花束課程</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#louise-section">師資陣容</a>
@@ -1105,15 +1393,15 @@
             <div class="color"></div>
             <div class="container-fluid  d-flex justify-content-around  flex-wrap flex-md-nowrap">
                 <div class="course-type1  col-12 col-md-4  ">
-                    <img class=" " src="/img/flower01.jpg" alt="">
+                    <img class=" " src="./img/flower01.jpg" alt="">
                     <h1>新娘捧花</h1>
                 </div>
                 <div class="course-type1 col-12 col-md-4">
-                    <a href=""> <img src="/img/forever01.jpg" alt=""> </a>
+                    <a href=""> <img src="./img/forever01.jpg" alt=""> </a>
                     <h1>永生花盅</h1>
                 </div>
                 <div class="course-type1 col-12 col-md-4">
-                    <img src="/img/flower05.jpeg" alt="">
+                    <img src="./img/flower05.jpeg" alt="">
                     <h1>星座花束</h1>
                 </div>
             </div>
@@ -1123,7 +1411,7 @@
             <div class="container">
                 <div class="row p-0 m-0 ">
                     <div class="bac-block1 col-12 col-md-7 p-0" data-aos="fade-up" data-aos-duration="1000">
-                        <img class="bac-img1" src="/img/flower10.jpg" alt="">
+                        <img class="bac-img1" src="./img/flower10.jpg" alt="">
                     </div>
 
                     <div class="bac-block2 col-9 col-md-5 text-center mx-auto" data-aos="fade-up"
@@ -1160,25 +1448,126 @@
 
                     <div class="bac-block1 col-12 col-md-7 p-0 " style="text-align: right;" data-aos="fade-up"
                         data-aos-duration="1000">
-                        <img class="bac-img2" src="/img/gallery17.jpg" alt="">
+                        <img class="bac-img2" src="./img/gallery17.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <!---------------------- --------------------- Parallax------------------------------------------------>
-        <section id="para-section">
-            <div class="para">
-                <div class="para-text">留下屬於妳的</div>
-                <div class="para-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">永恆美麗
+
+
+        <!---------------------- --------------------- 獅子座------------------------------------------------>
+        <section id="twelve-section">
+            <div class="twelve">
+                <div class="twelve-pic"></div>
+                <div class="twelve-title">
+                    <p>本月主打星座課程</p>
+                    <a href="page3.html" class="lion-link"  style="text-decoration:none;"><h4>獅子座</h4></a> 
+                    <br>
+                    <span>太陽般的熱情與堅定</span>
                 </div>
-                <div class="para-block">
-                    <div class="para-img" data-parallax="scroll" data-image-src="/img/para-img.jpg"></div>
+            </div>
+        </section>
+        <!---------------------- --------------------- 12星座卡片------------------------------------------------>
+        <section>
+
+            <div class="container">
+                <h4 class="top-title">十二星座系列花束</h4>
+                <!-- 第一排 -->
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col-6 col-md-3 margin-space" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="100">
+                        <div class="card-wrap">
+                            <img src="./img/flower05.jpeg" alt="">
+                            <h4>獅子座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 margin-space" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="300">
+                        <div class="card-wrap">
+                            <img src="./img/flower08-1.jpg" alt="">
+                            <h4>雙子座</h4>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="card-wrap">
+                            <img src="./img/flower06.jpg" alt="">
+                            <h4>處女座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                        <div class="card-wrap">
+                            <img src="./img/flower06.jpeg" alt="">
+                            <h4>金牛座</h4>
+                        </div>
+                    </div>
                 </div>
+                <!-- 第二排 -->
+                <div class="row" style="margin-bottom: 30px;">
+
+                    <div class="col-6 col-md-3 margin-space" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="100">
+                        <div class="card-wrap">
+                            <img src="./img/12-03.jpg" alt="">
+                            <h4>水瓶座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 margin-space" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="300">
+                        <div class="card-wrap">
+                            <img src="./img/12-02.jpeg" alt="">
+                            <h4>射手座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="card-wrap">
+                            <img src="./img/12-01.jpg" alt="">
+                            <h4>天秤座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                        <div class="card-wrap">
+                            <img src="./img/bannerImg.jpg" alt="">
+                            <h4>摩羯座</h4>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 第三排 -->
+                <div class="row" style="margin-bottom: 30px;">
+
+                    <div class="col-6 col-md-3 margin-space" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="100">
+                        <div class="card-wrap">
+                            <img src="./img/gallery23.jpg" alt="">
+                            <h4>巨蟹座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 margin-space" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="300">
+                        <div class="card-wrap">
+                            <img src="./img/gallery24.jpg" alt="">
+                            <h4>雙魚座</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="card-wrap">
+                            <img src="./img/flower12.jpg" alt="">
+                            <h4>天蠍座</h4>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                        <div class="card-wrap">
+                            <img src="./img/flower09.jpg" alt="">
+                            <h4>白羊座</h4>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </section>
-
-        <!---------------------- --------------------- 12星座系列------------------------------------------------>
         <!-- ------------------------------------------LOUISE------------------------------------------- -->
         <section id="louise-section">
             <div class="title-bar" style="width: 100%; position: relative; text-align:center; padding:30px;">
@@ -1187,10 +1576,11 @@
             </div>
 
             <div class="container-fluid">
-                <div class="row">
+                <!-- overflow可以避免特效把寬度撐開跑出卷軸 -->
+                <div class="row" style="overflow: hidden;">
                     <div class="col-12 col-md-6" style="padding-right: 0; padding-left: 0;">
                         <div class="louise-wrap" data-aos="fade-right" data-aos-duration="1000">
-                            <img src="/img/louise-0.jpg" alt="" style="width: 100%;">
+                            <img src="./img/louise-0.jpg" alt="" style="width: 100%;">
                         </div>
                     </div>
                     <div class="col-12 col-md-6 louise-info" style="padding-right: 0; padding-left: 0;"
@@ -1225,7 +1615,7 @@
                     <!-- Alice -->
                     <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
                         <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                            <img src="/img/teacher01.jpg" alt="">
+                            <img src="./img/teacher01.jpg" alt="">
                         </div>
                         <div class="teacher-info">
                             <span>花藝設計師</span>
@@ -1235,7 +1625,7 @@
                     <!-- Claire -->
                     <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
                         <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                            <img src="/img/teacher06.jpg" alt="">
+                            <img src="./img/teacher06.jpg" alt="">
                         </div>
                         <div class="teacher-info">
                             <span>花藝設計師</span>
@@ -1245,7 +1635,7 @@
                     <!-- Emily -->
                     <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
                         <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                            <img src="/img/teacher03.jpg" alt="">
+                            <img src="./img/teacher03.jpg" alt="">
                         </div>
                         <div class="teacher-info">
                             <span>花藝設計師</span>
@@ -1255,7 +1645,7 @@
                     <!-- Grace -->
                     <div class="col-6 col-md-3 teacher-hover" style="margin-bottom: 20px;">
                         <div class="teacher-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                            <img src="/img/teacher05.jpg" alt="">
+                            <img src="./img/teacher05.jpg" alt="">
                         </div>
                         <div class="teacher-info">
                             <span>花藝設計師</span>
@@ -1263,6 +1653,62 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-------------------------------------------------- 學員作品------------------------------------------------------------- -->
+        <section id="student">
+
+            <div class="container container-student">
+                <h4 class="student-title">我們在露易絲的回憶</h4>
+
+                <div class="row">
+                    <div class="col-6  col-lg-3 student-row" style="margin-bottom: 200px;">
+                        <div class="slider">
+                            <div class="photo photo1"></div>
+                            <div class="photo photo2"></div>
+                            <div class="photo photo3"></div>
+                        </div>
+                    </div>
+                    <div class="col-6  col-lg-3 student-row" style="margin-bottom: 20px;">
+                        <div class="slider">
+                            <div class="photo photo9"></div>
+                            <div class="photo photo5"></div>
+                            <div class="photo photo6"></div>
+                        </div>
+                    </div>
+                    <div class="col-6  col-lg-3 student-row">
+                        <div class="slider">
+                            <div class="photo photo7"></div>
+                            <div class="photo photo8"></div>
+                            <div class="photo photo9"></div>
+                        </div>
+                    </div>
+                    <div class="col-6  col-lg-3 student-row">
+                        <div class="slider">
+                            <div class="photo photo10"></div>
+                            <div class="photo photo11"></div>
+                            <div class="photo photo12"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <a class="student-title-bottom" href="page2.html">
+                <span>點我看相片集</span>
+            </a>
+        </section>
+
+        <!---------------------- --------------------- Parallax------------------------------------------------>
+        <section id="para-section">
+            <div class="para">
+                <div class="para-text">留下屬於妳的</div>
+                <div class="para-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">永恆美麗
+                </div>
+                <div class="para-block">
+                    <div class="para-img"></div>
+                </div>
+
             </div>
         </section>
         <!------------------------------------------------ 聯絡我們--------------------------------------- -->
@@ -1278,7 +1724,7 @@
                         <div class="row" style="padding-left: 20px;">
                             <div class="col-2" style="padding-left: 0;padding-right: 0;">
                                 <div class="icon">
-                                    <img class="icon-map" src="/img/map.png" alt="" style="padding-top:10px;">
+                                    <img class="icon-map" src="./img/map.png" alt="" style="padding-top:10px;">
                                 </div>
                             </div>
                             <div class="col-10  location">
@@ -1289,7 +1735,7 @@
                         <div class="row" style="padding-left: 20px;">
                             <div class="col-2" style="padding-left: 0;padding-right: 0;">
                                 <div class="icon">
-                                    <img class="icon-email" src="/img/email.png" alt="" style="padding-top:25px;">
+                                    <img class="icon-email" src="./img/email.png" alt="" style="padding-top:25px;">
                                 </div>
                             </div>
                             <div class="col-10  location">
@@ -1300,7 +1746,7 @@
                         <div class="row" style="padding-left: 20px;">
                             <div class="col-2" style="padding-left: 0;padding-right: 0;">
                                 <div class="icon">
-                                    <img class="icon-phone" src="/img/phone.png" alt="" style="padding-top:20px;">
+                                    <img class="icon-phone" src="./img/phone.png" alt="" style="padding-top:20px;">
                                 </div>
                             </div>
                             <div class="col-10  location">
@@ -1310,64 +1756,85 @@
                         </div>
                     </div>
                     <!-- 表格 -->
-                    <div class="col-lg-8">
-                        <form id="submit-form">
-                            <h4>報名課程</h4>
-                            <input class="user" type="text" placeholder="姓名  ex: 王曉明" name="user-name">
-                            <br>
-                            <input class="user" type="text" placeholder="信箱  ex: abc@gmail.com" name="user-name">
-                            <br>
-                            <select name="course">
-                                　<option value="course1">新娘捧花課程</option>
-                                　<option value="course1">永生花課程</option>
-                                　<option value="course1">12星座系列花束課程</option>
-                            </select>
-                            <br>
-                            <input id="confirm-window" type="button" onclick="submit()" value="提交"
-                                style="padding: 3px 30px;">
-
-                            <div id="mywindow" class="window">
-                                <!-- Modal content -->
-                                <div class="window-content">
-                                    <span class="close">&times;</span>
-                                    <p style="margin-top: 10px;">報名表已提交!! 露易絲花藝期待與您見面。</p>
+                    <form id="submit_form" style="margin-top: 10px;margin-left: 15px;">
+                        <h4 style="color: rgb(221, 109, 89); font-weight: 600;">報名課程</h4>
+                        <div class="form-group">
+                            <!-- class="form-control"內建讓輸入框有樣式 -->
+                            <input type="name" class="input-shape" placeholder="姓名 ex:王曉明">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="input-shape" placeholder="信箱 ex:abc@gmail.co,m">
+                        </div>
+                        <select name="course" class="course-select">
+                            　<option value="course1">新娘捧花課程</option>
+                            　<option value="course1">永生花課程</option>
+                            　<option value="course1">12星座系列花束課程</option>
+                        </select>
+                        <br>
+                        <button type="button" class="submit-shape" data-toggle="modal"
+                            data-target="#submit-window">提交</button>
+                    </form>
+                    <!-- 提交視窗 -->
+                    <div class="modal fade" id="submit-window" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <!-- 標頭 -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Louise Flower</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <!-- 內容 -->
+                                <div class="modal-body">
+                                    感謝您報名課程，我們會盡快與您聯繫^^
+                                </div>
+                                <!-- footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
             </div>
         </section>
+        <!-- ------------------------------google map------------------------------- -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.150426034604!2d120.6934025153902!3d24.201510677309102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469179de85c1dd7%3A0x759df66fc5a04225!2zNDA25Y-w5Lit5biC5YyX5bGv5Y2A55Kw5Lit6Lev5LiA5q61NjAtMeiZnw!5e0!3m2!1szh-TW!2stw!4v1587537365810!5m2!1szh-TW!2stw"
+            width="100%" height="500" frameborder="0" style="border:0; margin-bottom: -10px;" allowfullscreen=""
+            aria-hidden="false" tabindex="0"></iframe>
         <!-- ------------------------------footer------------------------------------ -->
         <footer>
             <div class="row background">
                 <div class="col-12 col-md-4 icon-group" data-aos="fade-down" data-aos-duration="1000"
                     data-aos-delay="0">
                     <div class="box">
-                        <a href=""><img src="/img/fb.png" alt=""></a>
+                        <a href=""><img src="./img/fb.png" alt=""></a>
                     </div>
                     <div class="box">
-                        <a href=""><img src="/img/messager.png" alt=""></a>
+                        <a href=""><img src="./img/messager.png" alt=""></a>
                     </div>
                     <div class="box">
-                        <a href=""><img src="/img/line.png" alt=""></a>
+                        <a href=""><img src="./img/line.png" alt=""></a>
                     </div>
                     <div class="box">
-                        <a href=""><img src="/img/ig.png" alt=""></a>
+                        <a href=""><img src="./img/ig.png" alt=""></a>
                     </div>
                     <div class="box">
-                        <a href=""><img src="/img/google.png" alt=""></a>
+                        <a href=""><img src="./img/google.png" alt=""></a>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-4 logo-position">
-                    <div class="logo-wrap  mx-auto" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                        <a href=""></a><img src="/img/LOGO.png" alt="">
+                    <div class="logo-wrap" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                        <a href="#"><img src="./img/LOGO.png" alt=""></a>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 open-class" >
                     <div class="open" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
                         <h4>OPENING HOURS</h4>
 
@@ -1378,9 +1845,10 @@
                 </div>
             </div>
         </footer>
-        <footer id="copyright" style="position: relative;">Copyright © 2018 Louise Flower Inc. All rights reserved
+        <footer id="copyright" style="position: relative;">此網頁純練習及測試用，不做任何商業行為及正式上架，若有侵權疑慮請告知。
             <div class="gototop">
-                <a href="#"><img src="/img/scrollup.png" alt=""></a>
+                <a data-easing="easeInOutQuint" data-scroll href="#"><img class="goto" src="./img/scrollup.png"
+                        alt=""></a>
             </div>
         </footer>
     </main>
@@ -1417,12 +1885,32 @@
     <script src="/js/parallax.js-1.5.0/parallax.min.js"></script>
     <!----------------------   AOS 掛載 ------------------------------------->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!----------------------   AOS初始化 ---------------------->
+
+
+    <!----------------------------------------------------------Initialize --------------------------------------------------------->
+
+    <!--- AOS --->
     <script>
         AOS.init();
     </script>
 
-    <!-- Swiper 初始化-->
+
+    <!--Smooth Scroll -->
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            // 不知道為啥如果是true畫面滾動會跑兩次??
+            speedAsDuration: false
+        });
+        var easeInQuad = new SmoothScroll('[data-easing="easeInOutQuint"]', { easing: 'easeInOutQuint' });
+    </script>
+
+
+    <!-- Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
             spaceBetween: 30,
@@ -1441,52 +1929,51 @@
             },
         });
     </script>
-    <!-- -----------------------------------Animation Script---------------------------------------- -->
-    <!-- <script>
-        const fromLeft = document.querySelector('.test')
-        fromLeft.classList.add('animated', 'bounceInLeft')
-    </script> -->
 
-    <!-- -----------------------------------NAV Script---------------------------------------- -->
 
+
+    <!-- -----------------------------------scroll & NAV & gotottop  Script---------------------------------------- -->
     <script>
-        var navBar = document.querySelector('.navbar')
+
 
         window.onscroll = function () {
             var nowScrollTop_safari = document.body.scrollTop
             var nowScrollTop_google = document.documentElement.scrollTop
+            var navSection = document.querySelector('#navSection')
             var scrollPic = document.querySelector('.scrollPic')
-
+            var gototop = document.querySelector('.gototop')
+            // 滑鼠
             if (nowScrollTop_safari > 200 || nowScrollTop_google > 200) {
-                navBar.classList.add('showNav')
+
                 scrollPic.classList.add('hideScroll')
             }
             else {
-                navBar.classList.remove('showNav')
+
                 scrollPic.classList.remove('hideScroll')
             }
-            if (nowScrollTop_safari > 1262 || nowScrollTop_google > 1262) {
-                navBar.classList.add('sticky')
+            // nav
+            if (nowScrollTop_safari > 1080 || nowScrollTop_google > 1080) {
+                navSection.classList.add('nav-opacity')
             }
             else {
-                navBar.classList.remove('sticky')
+                navSection.classList.remove('.nav-opacity')
+            }
+            // gototop
+            if (nowScrollTop_safari > 500 || nowScrollTop_google > 500) {
+                gototop.classList.add('show-gototop')
+            }
+            else {
+                gototop.classList.remove('show-gototop')
             }
         }
     </script>
 
-    <!-- Initialize Smooth Scroll. -->
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
-
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 500,
-            speedAsDuration: true
-        });
-        var easeInQuad = new SmoothScroll('[data-easing="easeInOutQuint"]', { easing: 'easeInOutQuint' });
-    </script>
-
+    <!-- ---------------------------清除表格內容 Script--------------------------- -->
+    <!-- <script>
+        function submit() {
+            document.querySelector('#submit_form').reset();
+        }
+    </script> -->
 
 </body>
 

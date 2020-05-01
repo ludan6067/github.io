@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- 下載字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <!-- link AOS   -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- link animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <title>Louise Flower 露易絲花藝課程</title>
+</head>
+
+<style>
+    body {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+
+    /* ---------------------------------lion CSS-------------------------------------- */
+    .container-fluid {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .banner-wrap {
+        /* width: 100%; */
+        overflow: hidden;
+    }
+
+    .banner-wrap img {
+        width: 100%;
+    }
+
+    .text {
+        padding: 100px 0 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title-1,
+    .title-2 {
+        padding: 15px 0 15px;
+
+        font-size: 28px;
+        letter-spacing: 15px;
+        font-weight: 800;
+    }
+
+    .title-1 {
+        color: crimson;
+    }
+
+    .title-2 {
+        color: rgb(45, 176, 185);
+    }
+
+    .title-3 {
+        margin-top: 50px; 
+        font-size: 20px;
+        letter-spacing:2px;
+    }
+/* 往左pa30是因為字最右邊本身有間隔 */
+    .title-4 {
+        padding: 0 0 40px 30px;
+        letter-spacing: 30px;
+        font-size: 60px;
+        font-weight: 900;
+        background: linear-gradient(45deg, #cc9c35 25%, #50b694 51%, #5cbdbd 75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .title-5 {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    .title-6 {
+        color: coral;
+        font-size: 30px;
+        font-weight: 800;
+
+    }
+
+    @media(max-width: 576px) {
+        .text {
+            padding: 50px 0 50px;
+        }
+
+        .title-1,
+        .title-2 {
+            padding: 10px 0 10px;
+            letter-spacing: 10px;
+            font-size: 20px;
+        }
+
+        .title-3 {
+            font-size: 16px;
+        }
+
+        .title-4 {
+            font-size: 30px;
+            padding-left: 27px;
+        }
+
+        .title-5,
+        .title-6 {
+            font-size: 20px;
+            margin-top: unset;
+        }
+    }
+
+
+    .back-home {
+        margin-top: 30px;
+        text-align: center;
+        line-height: 30px;
+        width: 70px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(54, 54, 54);
+        color: white;
+
+
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+
+    }
+
+    /* --------------------------雪花  CSS-------------------------------------- */
+    #content {
+        width: 100%;
+        height: 100%;
+        top: 42px;
+        overflow: hidden;
+        position: absolute;
+        /* background-color: brown; */
+    }
+
+    #snowflake {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .snowRoll {
+        position: absolute;
+        /* opacity: 0; */
+        animation-name: mysnow;
+        animation-duration: 20s;
+        /* background-color: cornflowerblue; */
+        color: cornsilk;
+        height: 80px;
+    }
+
+    @keyframes mysnow {
+        0% {
+            bottom: 100%;
+        }
+
+        50% {
+
+            transform: rotate(1080deg);
+        }
+
+        100% {
+            transform: rotate(0deg) translate3d(50px, 50px, 50px);
+        }
+    }
+
+    /* -----------------------------------------footer  CSS------------------------------------------- */
+    .background {
+        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .icon-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: lightcoral; */
+    }
+
+    .box {
+        width: 100%;
+        margin: 8px;
+    }
+
+    .box img {
+        max-width: 40%;
+        height: auto;
+        transition: ease-in-out;
+        opacity: 0.7;
+    }
+
+    .box:hover img {
+        animation: heart .5s linear;
+        transition: ease-in-out;
+        animation-iteration-count: infinite;
+        /* opacity: 0.7; */
+
+    }
+
+    @keyframes heart {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .open {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .open-class {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .open h4 {
+        color: white;
+        font-size: 25px;
+        font-weight: 900;
+        letter-spacing: 5px;
+        padding: 10px;
+    }
+
+    .open span {
+        color: rgb(10, 10, 10);
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 3px;
+    }
+
+    .logo-position {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-wrap {
+        width: 60px;
+        height: 75px;
+        overflow: hidden;
+    }
+
+    .logo-wrap img {
+        width: 100%;
+        opacity: 0.7;
+    }
+
+    .background .box {
+        text-align: center;
+    }
+
+    @media(max-width: 1200px) {
+        .open h4 {
+            font-size: 18px;
+        }
+
+        .open span {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .background {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .open {
+            padding: 20px;
+        }
+
+        .logo-wrap {
+            width: 60px;
+            height: 75px;
+        }
+
+        .box img {
+            max-width: 35%;
+            padding: 60px 0;
+        }
+    }
+
+    #copyright {
+        width: 100%;
+        background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #3c8a8a 75%);
+        padding: 10px;
+        color: rgb(48, 48, 48);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    #copyright .gototop {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 50px;
+        bottom: 100px;
+    }
+
+    .gototop img {
+        width: 100%;
+        height: auto;
+        transition: .3s;
+        opacity: 0.6;
+    }
+
+    .gototop:hover img {
+        animation-name: scroll;
+        animation-duration: 0.7s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .gototop {
+        opacity: 0;
+    }
+
+    .show-gototop {
+        opacity: 0.6;
+        transition: .3s;
+    }
+
+    @media(max-width: 768px) {
+        #copyright {
+            font-size: 10px;
+        }
+
+        #copyright .gototop {
+            width: 45px;
+            height: 45px;
+            right: 40px;
+            bottom: 250px;
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+
+            transform: translateY(0);
+        }
+
+
+        50% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<body>
+
+
+    <main>
+
+        <!-------------------------------------- banner ----------------------------------->
+        <section>
+            <div class="banner">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div id="content">
+                            <!-- 飄花 -->
+                            <div id="snowflake"></div>
+                        </div>
+                        <div class="col-12 col-xl-6" style="padding: 0;">
+                            <div class="banner-wrap">
+                                <img class="banner-photo" src="./img/lion-banner.jpg" alt="">
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <div class="text">
+                                <span class="title-1" data-aos="fade" data-aos-duration="2500"
+                                    data-aos-delay="100">用豔陽的熱情擁抱自己</span>
+                                <span class="title-2" data-aos="fade" data-aos-duration="2500"
+                                    data-aos-delay="1000">用堅忍的性情迎向未來</span>
+                                <span class="title-3" data-aos="fade-up" data-aos-duration="500"
+                                    data-aos-delay="2000">本月主打星座花束課程</span>
+                                <span class="title-4" data-aos="fade" data-aos-duration="2000" data-aos-delay="2500">獅子座
+                                </span>
+                                <span class="title-5" data-aos="fade" data-aos-duration="1000"
+                                    data-aos-delay="3000">授課老師</span>
+                                <span class="title-6" data-aos="fade" data-aos-duration="1000"
+                                    data-aos-delay="3000">Emily</span>
+                                <a href="index.html" class="animated infinite bounce delay-2s slower"> <button class="back-home ">回首頁</button> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- ------------------------------footer------------------------------------ -->
+        <footer>
+            <div class="row background">
+                <div class="col-12 col-md-4 icon-group" data-aos="fade-down" data-aos-duration="1000"
+                    data-aos-delay="0">
+                    <div class="box">
+                        <a href=""><img src="./img/fb.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/messager.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/line.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/ig.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/google.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 logo-position">
+                    <div class="logo-wrap" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                        <a href="#"><img src="./img/LOGO.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 open-class">
+                    <div class="open" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                        <h4>OPENING HOURS</h4>
+
+                        <span>Monday - Saturday</span>
+                        <br>
+                        <span>11:00 - 18:00</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer id="copyright" style="position: relative;">此網頁純練習及測試用，不做任何商業行為及正式上架，若有侵權疑慮請告知。
+            <div class="gototop">
+                <a data-easing="easeInOutQuint" data-scroll href="#"><img class="goto" src="./img/scrollup.png"
+                        alt=""></a>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+
+
+    <!--------------------------------- 掛載的東西一定要放在上面  下方寫JS才會動作 ---------------------------->
+
+    <!-- -------------掛載Smooth Scroll-------------- -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!---------------------- Swiper掛載 ------------------------------------->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!---------------------- bootstrap掛載 ------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--------------------------------- Parallax掛載------------------ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/parallax.js-1.5.0/parallax.min.js"></script>
+    <!----------------------   AOS 掛載 ------------------------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!----------------------------------------------------------Initialize --------------------------------------------------------->
+
+    <!--- AOS --->
+    <script>
+        AOS.init();
+    </script>
+
+
+    <!--Smooth Scroll -->
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            // 不知道為啥如果是true畫面滾動會跑兩次??
+            speedAsDuration: false
+        });
+        var easeInQuad = new SmoothScroll('[data-easing="easeInOutQuint"]', { easing: 'easeInOutQuint' });
+    </script>
+
+
+    <!-- Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+    <!-- -----------------------------------scroll & NAV & gotottop  Script---------------------------------------- -->
+    <script>
+
+
+        window.onscroll = function () {
+            var nowScrollTop_safari = document.body.scrollTop
+            var nowScrollTop_google = document.documentElement.scrollTop
+            var navSection = document.querySelector('#navSection')
+            var scrollPic = document.querySelector('.scrollPic')
+            var gototop = document.querySelector('.gototop')
+            // 滑鼠
+            if (nowScrollTop_safari > 200 || nowScrollTop_google > 200) {
+
+                scrollPic.classList.add('hideScroll')
+            }
+            else {
+
+                scrollPic.classList.remove('hideScroll')
+            }
+            // nav
+            if (nowScrollTop_safari > 1080 || nowScrollTop_google > 1080) {
+                navSection.classList.add('nav-opacity')
+            }
+            else {
+                navSection.classList.remove('.nav-opacity')
+            }
+            // gototop
+            if (nowScrollTop_safari > 50 || nowScrollTop_google > 50) {
+                gototop.classList.add('show-gototop')
+            }
+            else {
+                gototop.classList.remove('show-gototop')
+            }
+        }
+    </script>
+
+    <!-- ---------------------------清除表格內容 Script--------------------------- -->
+    <!-- <script>
+        function submit() {
+            document.querySelector('#submit_form').reset();
+        }
+    </script> -->
+
+
+    <!-- ----------------雪花效果---------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+    <script type="text/javascript">$(function () {
+            //js設定陣列儲存6張花瓣的圖片
+            var snowflakePNG = ['./img/snow1.png', './img/snow2.png', './img/snow3.png', './img/snow4.png', './img/snow5.png', './img/snow6.png']
+            var container = $("#content");
+            //獲取content的寬高 /////// 
+            visualWidth = container.width();
+            visualHeight = container.height();
+            //飄雪花 // /////// 
+            function snowflake() {
+                // 雪花容器 
+                var $flakeContainer = $('#snowflake');
+                // 隨機六張圖 
+                function getImagesName() { return snowflakePNG[[Math.floor(Math.random() * 6)]]; }
+                // 建立一個雪花元素 
+                function createSnowBox() {
+                    var url = getImagesName();
+                    return $('<div class="snowbox" />').css({ 'width': 41, 'height': 41, 'position': 'absolute', 'backgroundSize': 'cover', 'zIndex': 100000, 'top': '-41px', 'backgroundImage': 'url(' + url + ')' }).addClass('snowRoll');
+                }
+                // 開始飄花
+                setInterval(function () {
+                    // 運動的軌跡 
+                    var startPositionLeft = Math.random() * visualWidth - 100, startOpacity = 1, endPositionTop = visualHeight - 40, endPositionLeft = startPositionLeft - 100 + Math.random() * 500, duration = visualHeight * 10 + Math.random() * 5000;
+                    // 隨機透明度,不小於0 
+                    var randomStart = Math.random(); randomStart = randomStart < 0 ? startOpacity : randomStart;
+                    // 建立一個雪花 
+                    var $flake = createSnowBox();
+                    // 設計起點位置 
+                    $flake.css({ left: startPositionLeft, opacity: randomStart });
+                    // 加入到容器 
+                    $flakeContainer.append($flake);
+                    // 開始執行動畫 
+                    $flake.transition({
+                        //結束後刪除 
+                        top: endPositionTop, left: endPositionLeft, opacity: 0.7
+                    }, duration, 'ease-out', function () { $(this).remove() });
+                }, 200);
+            } snowflake()
+        })
+         //執行函式
+    </script>
+</body>
+
+</html>

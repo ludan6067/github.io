@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- 下載字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <!-- link AOS   -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- link animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <title>Louise Flower 露易絲花藝課程</title>
+</head>
+
+<style>
+    body {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+
+
+
+
+
+
+
+
+    /* <!---------------------- NAV BAR CSS -------------------------------------> */
+    #navSection {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
+    .nav-opacity {
+        opacity: 0.5;
+    }
+
+    .navbar {
+        background-color: #000000 !important;
+        transition: .5s;
+    }
+
+
+    .logo-top img {
+        height: 45px;
+        background-color: white;
+        border-radius: 5%;
+    }
+
+    .hamberger {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        background-image: url('./img/menu.png');
+        background-position: center;
+        background-size: cover;
+        border-radius: 5%;
+        opacity: 0.5;
+    }
+
+    .nav-item {
+        margin-left: 15px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        color: rgb(255, 255, 255) !important;
+        transition: .5s;
+
+    }
+
+    ul>li:hover a {
+        transition: .3s;
+        /* font-size: 17px; */
+        font-weight: bold;
+        color: rgb(0, 0, 0) !important;
+        transition: .5s;
+        background-color: #ffffff;
+        border-radius:3px ;
+    }
+
+    @media(max-width: 992px) {
+        .nav-link {
+            text-align: right;
+        }
+
+    }
+
+    /* ---------------------------------相片牆 CSS-------------------------------------- */
+    .container {
+        /* width: 1200px;
+        height: 100vh; */
+        margin:  auto;
+        columns: 4;
+        column-gap: 40px;
+    }
+
+    /* margin  上 左右  下 */
+    .container .photo-box {
+        width: 100%;
+        margin: 0 0 20px;
+        padding: 10px;
+        background: #fff;
+        overflow: hidden;
+        /* 照片跟文字才不會被裁開 */
+        break-inside: avoid;
+    }
+
+    .container .photo-box img {
+        width: 100%;
+    }
+
+    .container .photo-box h4 {
+        margin: 10px 0 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .container .photo-box p {
+        margin: 0;
+        padding: 0 0 10px;
+        font-size: 16px;
+    }
+
+    @media(max-width: 1200px) {
+        .container {
+            columns: 3;
+            width: calc(100% - 40px);
+            box-sizing: border-box;
+            padding: 20px 20px 20px 0;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .container {
+            columns: 2;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .container {
+            columns: 1;
+        }
+    }
+/* -----------------------------------------相片牆標題------------------------------ */
+.title-block{
+    height: 100px;
+    background-color: white;
+    
+}
+     /* -----------------------------------------footer  CSS------------------------------------------- */
+     .background {
+            background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #7da7bb 75%);
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .icon-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: lightcoral; */
+        }
+
+        .box {
+            width: 100%;
+            margin: 8px;
+        }
+
+        .box img {
+            max-width: 40%;
+            height: auto;
+            transition: ease-in-out;
+            opacity: 0.7;
+        }
+
+        .box:hover img {
+            animation: heart .5s linear;
+            transition: ease-in-out;
+            animation-iteration-count: infinite;
+            /* opacity: 0.7; */
+
+        }
+
+        @keyframes heart {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .open {
+            padding:15px;
+            text-align: center;
+        }
+        .open-class{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .open h4 {
+            color: white;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 5px;
+            padding: 10px;
+            /* border: solid; */
+
+
+        }
+
+        .open span {
+            color: rgb(10, 10, 10);
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 3px;
+
+        }
+
+        .logo-position {
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+        }
+
+        .logo-wrap {
+            width: 60px;
+            height: 75px;
+            overflow: hidden;
+        }
+
+        .logo-wrap img {
+            width: 100%;
+            opacity: 0.7;
+        }
+
+        .background .box {
+            text-align: center;
+        }
+
+        @media(max-width: 1200px) {
+            .open h4{
+                font-size: 18px;
+            }
+            .open span {
+                font-size: 16px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .background {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .open {
+                padding: 20px;
+            }
+
+            .logo-wrap {
+                width: 60px;
+                height: 75px;
+            }
+
+            .box img {
+                max-width: 35%;
+                padding: 60px 0;
+            }
+
+        }
+
+        #copyright {
+            width: 100%;
+            background: linear-gradient(141deg, #f5b9a7 0%, #779282 51%, #3c8a8a 75%);
+            padding: 10px;
+            color: rgb(48, 48, 48);
+            text-align: center;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        #copyright .gototop {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+        }
+
+        .gototop img {
+            width: 100%;
+            height: auto;
+            transition: .3s;
+            opacity: 0.6;           
+        }
+        .gototop:hover img{
+            animation-name: scroll;
+            animation-duration: 0.7s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .gototop {
+            opacity: 0;
+        }
+
+        .show-gototop {
+            opacity: 0.6;
+            transition: .3s;
+        }
+
+        @media(max-width: 768px) {
+            #copyright{
+                font-size: 10px;
+            }
+            #copyright .gototop {
+                width: 45px;
+                height: 45px;
+                right: 40px;
+                bottom: 250px;
+            }
+
+        }
+
+        @keyframes scroll {
+            0% {
+
+                transform: translateY(0);
+            }
+
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+</style>
+
+<body>
+
+
+
+
+
+
+    <!---------------------- nav bar ------------------------------------->
+    <section id="navSection">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div class="container" style="padding: 5px;">
+                <!-- LOGO -->
+                <a data-easing="easeInOutQuint" data-scroll class="logo-top" href="./index.html"> <img src="./img/LOGO.png" alt="">
+                </a>
+
+                <!-- 漢堡條 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent">
+                    <div class="hamberger"></div>
+                </button>
+
+                <!-- LOGO右邊的整個NAV橫條 -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="./index.html">回首頁</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+    </section>
+
+
+    <main>
+        <div class="title-block"></div>
+        <!-- 相片及 -->
+        <div class="container photo-container">
+            <div class="photo-box">
+                <img src="./img/gallery01.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery02.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery03.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery04.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery05.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery06.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery07.jpeg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery08.jpg" alt="">
+
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery09.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery10.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery11.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery12.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery13.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery14.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery15.png" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery16.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery17.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery18.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery19.jpg" alt="">
+            </div>
+            
+            <div class="photo-box">
+                <img src="./img/gallery20.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery21.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery22.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery23.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery24.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery25.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery26.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery27.jpeg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery28.png" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery29.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery30.jpg" alt="">
+            </div>
+
+            <div class="photo-box">
+                <img src="./img/gallery31.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="title-block"></div>
+
+        <!-- ------------------------------footer------------------------------------ -->
+        <footer>
+            <div class="row background">
+                <div class="col-12 col-md-4 icon-group" data-aos="fade-down" data-aos-duration="1000"
+                    data-aos-delay="0">
+                    <div class="box">
+                        <a href=""><img src="./img/fb.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/messager.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/line.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/ig.png" alt=""></a>
+                    </div>
+                    <div class="box">
+                        <a href=""><img src="./img/google.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 logo-position">
+                    <div class="logo-wrap" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                        <a href="#"><img src="./img/LOGO.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 open-class" >
+                    <div class="open" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                        <h4>OPENING HOURS</h4>
+
+                        <span>Monday - Saturday</span>
+                        <br>
+                        <span>11:00 - 18:00</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer id="copyright" style="position: relative;">此網頁純練習及測試用，不做任何商業行為及正式上架，若有侵權疑慮請告知。
+            <div class="gototop">
+                <a data-easing="easeInOutQuint" data-scroll href="#"><img class="goto" src="./img/scrollup.png"
+                        alt=""></a>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+
+
+    <!--------------------------------- 掛載的東西一定要放在上面  下方寫JS才會動作 ---------------------------->
+
+    <!-- -------------掛載Smooth Scroll-------------- -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!---------------------- Swiper掛載 ------------------------------------->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!---------------------- bootstrap掛載 ------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--------------------------------- Parallax掛載------------------ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/parallax.js-1.5.0/parallax.min.js"></script>
+    <!----------------------   AOS 掛載 ------------------------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!----------------------------------------------------------Initialize --------------------------------------------------------->
+
+    <!--- AOS --->
+    <script>
+        AOS.init();
+    </script>
+
+
+    <!--Smooth Scroll -->
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            // 不知道為啥如果是true畫面滾動會跑兩次??
+            speedAsDuration: false
+        });
+        var easeInQuad = new SmoothScroll('[data-easing="easeInOutQuint"]', { easing: 'easeInOutQuint' });
+    </script>
+
+
+    <!-- Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+    <!-- -----------------------------------scroll & NAV & gotottop  Script---------------------------------------- -->
+    <script>
+
+
+        window.onscroll = function () {
+            var nowScrollTop_safari = document.body.scrollTop
+            var nowScrollTop_google = document.documentElement.scrollTop
+            var navSection = document.querySelector('#navSection')
+            var scrollPic = document.querySelector('.scrollPic')
+            var gototop = document.querySelector('.gototop')
+            // 滑鼠
+            if (nowScrollTop_safari > 200 || nowScrollTop_google > 200) {
+
+                scrollPic.classList.add('hideScroll')
+            }
+            else {
+
+                scrollPic.classList.remove('hideScroll')
+            }
+            // nav
+            if (nowScrollTop_safari > 1080 || nowScrollTop_google > 1080) {
+                navSection.classList.add('nav-opacity')
+            }
+            else {
+                navSection.classList.remove('.nav-opacity')
+            }
+            // gototop
+            if (nowScrollTop_safari > 50 || nowScrollTop_google > 50) {
+                gototop.classList.add('show-gototop')
+            }
+            else {
+                gototop.classList.remove('show-gototop')
+            }
+        }
+    </script>
+
+    <!-- ---------------------------清除表格內容 Script--------------------------- -->
+    <!-- <script>
+        function submit() {
+            document.querySelector('#submit_form').reset();
+        }
+    </script> -->
+
+</body>
+
+</html>
