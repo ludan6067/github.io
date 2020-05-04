@@ -809,8 +809,11 @@ li a:hover {
     height: 80px;
     color:white ;
     font-size: 20px;
-   
-}
+   }
+  @media(max-width:576px){
+    .copyright{
+        font-size: 12px;
+  } 
 /* --------gototop----------------- */
 .gototop {
     width: 50px;
