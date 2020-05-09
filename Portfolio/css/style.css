@@ -715,6 +715,12 @@ li a:hover {
         font-size: 14px;
     }
 }
+   
+  @media(max-width:576px){
+    .copyright{
+        font-size: 12px;
+    }    
+  } 
 /* --------gototop----------------- */
 .gototop {
     width: 50px;
