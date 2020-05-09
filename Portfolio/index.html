@@ -4,23 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-DannyYang</title>
+    <!-- Primary Meta Tags -->
+    <title>My_Portfolio</title>
+    <meta name="title" content="My_Portfolio">
+    <meta name="description" content="">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ludan6067.github.io/Portfolio/">
+    <meta property="og:title" content="My_Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ludan6067.github.io/Portfolio/">
+    <meta property="twitter:title" content="My_Portfolio">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    <title>My_Portfolio</title>
+
+    
     <!-- 掛載的套件有權重的問題 自己的CSS要放在最下面-->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- link swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
     <!-- 下載字體 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
-    <!-- link AOS   -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- link animation -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- link Lightbox -->
-    <link rel="stylesheet" href="css/lightbox.css">
+
     <!-- 載入Fontawesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./css/hover-min.css">
@@ -39,354 +54,117 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-         <a href="#"class="logo">Portfolio</a>
+        <a href="#" class="logo">Portfolio</a>
         <ul>
-            <li><a href="#photographer-section">Photographer</a></li>
-            <li><a href="#mp-text">PhotoShop</a></li>
-            <li><a href="#ai">illustrator</a></li>
             <li><a href="#front">front-End</a></li>
+            <li><a href="#ps">PhotoShop</a></li>
+            <li><a href="#ai">illustrator</a></li>
+            <li><a href="#photographer">Photographer</a></li>
         </ul>
     </nav>
 
     <!-- banner -->
     <div class="banner">
-        <p class="word-1">photog<span style="color: #16817a;">r</span>a<span style="color: #f79071;">p</span>her</p>
-        <p class="word-2">photosho</p>
-        <p class="word-3">illust<span style="color: #fa744f;">r</span>ato</p>
-        <p class="word-4">F ont-end</p>
-        <h5 class="word-5">MY</h5>
-        <h1 class="word-6">PORTFOLIO</h1>
-        <div class="bac"></div>
-        <h1 class="banner-title">danny yang</h1>
-        <a class="scroll" href="#skill">
+        <a class="scroll" href="#skill-1">
             <img src="./img/scroll.png" alt="">
         </a>
+        <a class="scroll-1" href="#skill-2">
+            <img src="./img/scroll-1.png" alt="">
+        </a>
     </div>
-    <section id="skill" class="skill">
-        
-            <div class="row skill-row">
-                <div class="col-6 col-lg-3 relat-use">
-                    <div class="photographer skill-img mg">
-                        <a href="#photographer-section"><img src="./img/photographer.jpg" alt=""></a>
-                    </div>
-                    <div class="text-block">
-                        <p>Photographer</p>
-                    </div>
-                </div>
 
-                <div class="col-6 col-lg-3 relat-use">
-                    <div class="photographer skill-img mg">
-                        <a href="#ps"><img src="./img/mp-4.jpg" alt=""></a>
-                    </div>
-                    <div class="text-block">
-                        <p>PhotoShop</p>
-                    </div>
-                </div>
+    <!-- 4 skills section -->
 
-                <div class="col-6 col-lg-3 relat-use">
-                    <div class="photographer skill-img ">
-                        <a href="#ai"><img src="./img/ai.jpg" alt=""></a>
-                    </div>
-                    <div class="text-block">
-                        <p>illustrator</p>
-                    </div>
+    <!-- 576以上版本 -->
+    <section id="skill-1" class="skill-1">
+        <div class="row skill-1-row">
+            <!-- front-end -->
+            <div class="col-6 col-xl-3 relat-use">
+                <div class="photographer skill-1-img">
+                    <a href="#front"> <img src="./img/front.jpg" alt=""></a>
                 </div>
-
-                <div class="col-6 col-lg-3 relat-use">
-                    <div class="photographer skill-img">
-                        <a href="#front"> <img src="./img/front.jpg" alt=""></a>
-                    </div>
-                    <div class="text-block">
-                        <p>front-End</p>
-                    </div>
+                <div class="text-block">
+                    <p>front-End</p>
                 </div>
-
             </div>
-       
+            <!-- PS -->
+            <div class="col-6 col-xl-3 relat-use">
+                <div class="photographer skill-1-img mg">
+                    <a href="#ps"><img src="./img/mp-4.jpg" alt=""></a>
+                </div>
+                <div class="text-block">
+                    <p>PhotoShop</p>
+                </div>
+            </div>
+            <!-- AI -->
+            <div class="col-6 col-xl-3 relat-use">
+                <div class="photographer skill-1-img ">
+                    <a href="#ai"><img src="./img/ai.jpg" alt=""></a>
+                </div>
+                <div class="text-block">
+                    <p>illustrator</p>
+                </div>
+            </div>
+            <!-- Photographer -->
+            <div class="col-6 col-xl-3 relat-use">
+                <div class="photographer skill-1-img mg">
+                    <a href="#photographer"><img src="./img/photographer.jpg" alt=""></a>
+                </div>
+                <div class="text-block">
+                    <p>Photographer</p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-
-    <!-- photographer abillity -->
-    <div class="ps">
-        <div class="ps-1">
-            <p>My ability about</p>
-            <div class="ps-img">
-                <a href="#photographer-section"><img src="./img/camera.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <!--------- photographer parallax --------->
-    <div class="para-wrap">
-        <div class="para"></div>
-    </div>
-
-
-    <section class="photographer-section" id="photographer-section">
+    <!-- 576以下版本 -->
+    <section id="skill-2" class="skill-2">
 
         <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/01.jpg" alt="">
-                </div>
+            <div class="col-12 sm-skill">
+                <a href="#front">
+                    <p>Front-end</p>
+                </a>
             </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>LANDSCAPE</h4>
-                </div>
+            <div class="col-12 sm-skill">
+                <a href="#ps">
+                    <p>Photoshop</p>
+                </a>
+            </div>
+            <div class="col-12 sm-skill">
+                <a href="#ai">
+                    <p>illustrator</p>
+                </a>
+            </div>
+            <div class="col-12 sm-skill">
+                <a href="#photographer">
+                    <p>Photographer</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------------Front_End abillity------------------------ -->
+    <section id="front">
+        <div class="ps">
+            <div class="ps-1">
+                <p>My ability about</p>
+                <br>
+                <a href="#front-1"><img src="./img/front.png" alt=""></a>
             </div>
         </div>
 
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>TRADITIONAL</h4>
-                </div>
+        <div class="row" id="front-1">
+            <div class="col-12 col-lg-6 front-img front-img-1">
+                <img src="./img/front-01.jpg" alt="">
             </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/03.jpg" alt="">
-                </div>
+            <div class="col-12 col-lg-6 front-img front-img-2">
+                <img src="./img/front-02.jpg" alt="">
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/pet.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>PET</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>FASHION DESIGN</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/04.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/05.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>JEWELLERY</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>STUDIO PORTRAIT</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/studio.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/commercial.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>COMMERCIAL</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>RING</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/ring.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/food01.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>FOOD</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>PERFORMANCE ART</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/performance.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/race.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>RACE</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>SCHOOL</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/school.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/space.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>SPACE</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>BANQUET</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/banquet.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/classical.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>CLASSICAL</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>PORTRAIT</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/portrait.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/wedding.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>WEDDING</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>PREGNANT</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/pregnant.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/kids.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>KIDS</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row change">
-            <div class="col-12 col-md-6 photographer-text">
-                <div>
-                    <h4>LIFE</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photographer-pic photographer-pic-1">
-                    <img src="./img/life.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
     </section>
 
-    <!-- PS abbility -->
+    <!-------------------------------- PS abbility --------------------------------->
     <section id="ps">
         <div class="ps">
             <div class="ps-1">
@@ -429,7 +207,9 @@
         </div>
 
         <!-- matte Painting 影片 -->
-        <h4 class="speed">Speed Art</h4>
+        <div class="mp-text">
+            <h4>Speed Art</h4>
+        </div>
         <div class="embed-responsive embed-responsive-16by9 video">
             <iframe width="600" height="400" src="https://www.youtube.com/embed/ZIQI51sYcwc" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -437,11 +217,11 @@
         </div>
 
         <!-- PS創意 -->
-        <div class="creative">
-            <h4>CREATIVE</h4>
+        <div class="mp-text">
+            <h4>Creative</h4>
         </div>
 
-        <div class="row">
+        <div class="row ">
             <div class="col-12 col-md-6  crea-img">
                 <img src="./img/06.jpg" alt="">
             </div>
@@ -457,7 +237,7 @@
         </div>
     </section>
 
-    <!-- ---ai----- -->
+    <!-- ---------------------------ai abillity------------------------------- -->
     <section id="ai">
         <div class="ps">
             <div class="ps-1">
@@ -466,15 +246,17 @@
                 <a href="#ai-1"><img src="./img/ai.png" alt=""></a>
             </div>
         </div>
-        <!-- Low Polly  -->
+        <!-- Low Poly  -->
         <div class="row" id="ai-1">
             <div class="col-12 col-md-6">
-                <div class="ai-pic">
-                    <img src="./img/ai-01.png" alt="">
+                <div class="ai-pic ">
+                    <img src="./img/ai-00.jpg" alt="">
                 </div>
             </div>
-            <div class="col-12 col-md-6 ai-text">
-                <h4>Low POLLY</h4>
+            <div class="col-12 col-md-6">
+                <div class="ai-pic">
+                    <img src="./img/ai-01.jpg" alt="">
+                </div>
             </div>
         </div>
 
@@ -545,28 +327,162 @@
 
     </section>
 
-    <section id="front">
-        <div class="ps">
-            <div class="ps-1">
-                <p>My ability about</p>
-                <br>
-                <a href="#front-1"><img src="./img/front.png" alt=""></a>
+
+
+    <!---------------------------- photographer abillity -------------------------------->
+    <div class="ps" id="photographer">
+        <div class="ps-1">
+            <p>My ability about</p>
+            <div class="ps-img">
+                <a href="#photographer-section"><img src="./img/camera.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!----- photographer parallax ------->
+    <div class="para-wrap">
+        <div class="para"></div>
+    </div>
+
+
+    <section class="photographer-section" id="photographer-section">
+        <!-- LANDSCAPE -->
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/01.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>LANDSCAPE</h4>
+                </div>
+            </div>
+        </div>
+        <!-- TRADITIONAL -->
+        <div class="row change">
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>TRADITIONAL</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/03.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- PET -->
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/pet.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>PET</h4>
+                </div>
+            </div>
+        </div>
+        <!-- FASHION DESIGN -->
+        <div class="row change">
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>FASHION DESIGN</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/04.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- JEWELLERY -->
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/05.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>JEWELLERY</h4>
+                </div>
+            </div>
+        </div>
+        <!-- STUDIO PORTRAIT -->
+        <div class="row change">
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>STUDIO PORTRAIT</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/studio.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- FOOD -->
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/food.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>FOOD</h4>
+                </div>
+            </div>
+        </div>
+        <!-- PERFORMANCE ART -->
+        <div class="row change">
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>PERFORMANCE ART</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/performance.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- CLASSICAL -->
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/classical.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>CLASSICAL</h4>
+                </div>
+            </div>
+        </div>
+        <!-- LIFE -->
+        <div class="row change">
+            <div class="col-12 col-md-6 photographer-text">
+                <div>
+                    <h4>LIFE</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="photographer-pic photographer-pic-1">
+                    <img src="./img/life.jpg" alt="">
+                </div>
             </div>
         </div>
 
-        <div class="row" id="front-1">
-            <div class="col-12 col-lg-6 front-img front-img-1">
-                <img src="./img/front-01.jpg" alt="">
-            </div>
-            <div class="col-12 col-lg-6 front-img front-img-2">
-                <img src="./img/front-02.jpg" alt="">
-            </div>
-        </div>
     </section>
 
+    <!-- --------------------------------Hobby---------------------------------- -->
     <section>
-        <div class="creative">
-            <h4>HOBBY</h4>
+        <div class="mp-text" id="mp-text">
+            <h4>My Hobby</h4>
         </div>
 
         <div class="row first-row">
@@ -606,28 +522,34 @@
         <div class="row background">
             <div class="col-12  icon-group">
                 <div class="box">
-                    <a href="https://www.facebook.com/flyludan/"><img src="./img/fb.png" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/flyludan/"><img
+                            src="./img/fb.png" alt=""></a>
                 </div>
                 <div class="box">
-                    <a href="https://www.youtube.com/channel/UC5zYthwZr8vy2NWRQ9TWuEw?view_as=subscriber"><img
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/channel/UC5zYthwZr8vy2NWRQ9TWuEw?view_as=subscriber"><img
                             src="./img/youtube.png" alt=""></a>
                 </div>
                 <div class="box">
-                    <a href="https://line.me/ti/p/Zr25TR8R9g"><img src="./img/line.png" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://line.me/ti/p/Zr25TR8R9g"><img
+                            src="./img/line.png" alt=""></a>
                 </div>
                 <div class="box">
-                    <a href="https://www.instagram.com/ludanstudio/"><img src="./img/ig.png" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ludanstudio/"><img
+                            src="./img/ig.png" alt=""></a>
                 </div>
                 <div class="box">
-                    <a href="https://ludanstudio.smugmug.com/"><img src="./img/web.png" alt=""></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://ludanstudio.smugmug.com/"><img
+                            src="./img/web.png" alt=""></a>
                 </div>
             </div>
         </div>
-
+        <!-- copyright -->
         <div class="copyright">
-            Copyright © 2015 Ludan Studio All rights reserved
+            <p>Copyright © 2015 LudanStudio All rights reserved.</p>
         </div>
 
+        <!-- gototop -->
         <div class="gototop">
             <a data-easing="easeInOutQuint" data-scroll href="#"><img class="goto" src="./img/scrollup.png" alt=""></a>
         </div>
@@ -636,8 +558,7 @@
 
 
         <!--------------------------------- 掛載的東西一定要放在上面  下方寫JS才會動作 ---------------------------->
-        <!---------------------- Swiper掛載 ------------------------------------->
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
         <!---------------------- bootstrap掛載 ------------------------------------->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -648,21 +569,16 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-        <!----------------------   AOS 掛載 ------------------------------------->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- --------------------Lightbox掛載  要用他自己的JQ---------------------------------- -->
-        <script src="js/lightbox-plus-jquery.js"></script>
-        <!----------------------   AOS初始化 ---------------------->
-        <script>
-            AOS.init();
 
+
+        <script>
             window.onscroll = function () {
                 var nowScrollTop_safari = document.body.scrollTop
                 var nowScrollTop_google = document.documentElement.scrollTop
                 var gototop = document.querySelector('.gototop')
-                var nav=document.querySelector('#nav')
+                var nav = document.querySelector('#nav')
 
-                // gototop
+                // gototop 超過500高才顯示
                 if (nowScrollTop_safari > 500 || nowScrollTop_google > 500) {
                     gototop.classList.add('show-gototop')
                 }
@@ -670,7 +586,7 @@
                     gototop.classList.remove('show-gototop')
                 }
 
-                // nav
+                // nav 超過100高則顯示
                 if (nowScrollTop_safari < 100 || nowScrollTop_google < 100) {
                     nav.classList.add('nav-delay')
                 }
