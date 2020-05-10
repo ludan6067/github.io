@@ -48,11 +48,11 @@ html{
     animation-fill-mode: forwards;
 }
 .scroll-1{
-    width: 70px;
-    height: 100px;
+    width: 50px;
+    height: 80px;
     overflow: hidden;
     position: absolute;
-    left: calc(50% - 35px);
+    left: calc(50% - 25px);
     bottom: 7%;
     z-index: 2;
     opacity: 0.8;
