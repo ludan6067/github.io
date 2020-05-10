@@ -252,6 +252,9 @@ li a:hover {
     }
 }
 @media(max-width: 576px) {
+    ul{
+        justify-content: start;
+    }
 }
 /* ---------------------------------skill section----------------------------------- */
 /* 576以上版本 */
