@@ -359,11 +359,8 @@ li a:hover {
 .front-img img{
     width: 100%;
 }
-.front-img-1{
-    padding-right: unset !important;
-}
-.front-img-2{
-  padding-left: unset !important;
+.margin-use{
+    margin-bottom: 100px !important;
 }
 /* ---------------------------PS---------------------------------- */
 .ps{
