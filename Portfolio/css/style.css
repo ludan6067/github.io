@@ -388,7 +388,7 @@ li a:hover {
         font-size: 30px;
     }
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .ps-1 p{
         font-size: 25px;
     }
@@ -484,7 +484,7 @@ li a:hover {
 }
 
 
- @media(max-width:768px){
+ @media(max-width:767px){
     .mp-1 h4{
         font-size: 20px;
         padding: 20px 0 20px;
@@ -567,7 +567,7 @@ li a:hover {
     padding: 10px   ;
     color: rgb(46, 46, 46);
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .photographer-text h4{
         font-size: 25px;
     }
@@ -590,7 +590,7 @@ li a:hover {
     background-size: cover;
     background-attachment: fixed;  
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .para{
          background-image: url(../img/02_1.jpg);
          background-position: center;
@@ -606,7 +606,7 @@ li a:hover {
     padding-right: 0;
     padding-left: 0;
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .change{
         display: flex;
         flex-direction: column-reverse;
@@ -629,7 +629,7 @@ li a:hover {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .mb-use{
         margin-bottom: 10px;
     }
@@ -691,7 +691,7 @@ li a:hover {
         max-width: 35%;
     }
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .box img {
         max-width: 50%;
     }
