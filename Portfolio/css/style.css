@@ -567,7 +567,7 @@ li a:hover {
     padding: 10px   ;
     color: rgb(46, 46, 46);
 }
-@media(max-width:767px){
+@media(max-width:768px){
     .photographer-text h4{
         font-size: 25px;
     }
