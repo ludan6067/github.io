@@ -601,6 +601,15 @@ li a:hover {
          background-attachment: fixed;  
     }
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) { 
+    .para{
+       background-attachment:scroll !important;
+       background-size: cover;
+       height: 100%;
+       overflow: hidden;
+    }
+  }
+
 /* 我削掉了col的間距  與要去掉row的margin，不然會炸出滾軸 */
 .row {
     margin: 0;
