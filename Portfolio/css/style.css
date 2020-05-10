@@ -75,7 +75,7 @@ html{
 .scroll img{
     width: 100%;
 }
-@media(max-width:1400px){
+@media(max-width:1540px){
     .banner{
         background-image: url(../img/banner03.jpg);
         background-position: center;
