@@ -362,6 +362,11 @@ li a:hover {
 .margin-use{
     margin-bottom: 100px !important;
 }
+@media(max-width:576px){
+    .margin-use{
+        margin-bottom: 50px !important;
+    }
+}
 /* ---------------------------PS---------------------------------- */
 .ps{
     width: 100%;
