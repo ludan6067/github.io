@@ -768,6 +768,12 @@ li a:hover {
         transform: translateY(0);
     }
 }
+@media(max-width:768px){
+    .gototop{
+        right: 16px;
+        bottom: 78px;
+    }
+}
 @media(max-width:500px){
     .gototop{
         width: 40px;
