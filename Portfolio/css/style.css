@@ -182,6 +182,7 @@ li a:hover {
     float: right;
     line-height: 80px;
     margin-right: 40px;
+    padding-top: 25px;
     cursor: pointer;
     display: none;
 }
