@@ -1,124 +1,304 @@
+$color-bk: #1d1d1f;
+$color-wt: rgb(238, 238, 238);
+$color-rd: rgb(175, 37, 37);
+$color-bl: rgb(38, 109, 240);
+$color-grey: grey;
+$fontStyle-pop: "Poppins", sans-serif;
+$fontStyle-noto: "Noto Sans TC", sans-serif;
 
-$color-bk:#1d1d1f;
-$color-wt:rgb(238, 238, 238);
-$color-rd:rgb(175, 37, 37);
-$fontStyle:'Poppins', sans-serif;
-     
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav{
-    width: 100%;
-    height: 80px;
-    background-color: $color-bk;
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: $color-bk;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  a.logo {
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+    }
+    h1 {
+      display: none;
+    }
+  }
+
+  ul {
     display: flex;
-    justify-content: space-around;
-    position: fixed;
-    top: 0;
-    
-    a.logo{
-        width: 50px;
-        height: 50px;
-        margin: auto 0;
-        overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    li > a {
+      text-decoration: none;
+      color: $color-wt;
+      font-family: $fontStyle-pop;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 3px 50px;
 
-        >img{
-            width: 100%;
-        }
-        h1{
-            display: none;
-        }
+      &:hover {
+        background-color: $color-rd;
+        border-radius: 5px;
+        transition: ease-in 0.3s;
+      }
+    }
+  }
+
+  .burger {
+    cursor: pointer;
+    margin: auto 0;
+    display: none;
+
+    > div {
+      width: 25px;
+      height: 3px;
+      background-color: $color-wt;
+      margin: 10px;
+      transition: ease-in 0.3s;
+    }
+  }
+
+  @media (max-width: 991px) {
+    ul > li a {
+      padding: 0 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    .burger {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      height: calc(100vh - 80px);
+      top: 80px;
+      right: -100%;
+      width: 100%;
+      background-color: $color-bk;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 60px 0;
+      opacity: 0;
+      transition: ease-in-out 0.5s;
+    }
+    .nav-active {
+      right: 0%;
+      opacity: 1;
+      transition: ease-in-out 0.5s;
     }
 
-    ul{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-
-        li>a{
-            text-decoration: none;
-            color: $color-wt;
-            font-family: $fontStyle;
-            font-size: 20px;
-            font-weight: 500;
-            padding: 3px 50px;
-
-            &:hover{
-                background-color: $color-rd; 
-                border-radius: 5px;
-                transition: ease-in .3s;
-            }
-        }
+    .toggle .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: ease-in 0.3s;
     }
-    
-    .burger{
-        cursor: pointer;
-        margin: auto 0;
-        display: none;
-        
-        >div{
-            width: 25px;
-            height: 3px;
-            background-color: $color-wt;
-            margin: 10px;
-            transition: ease-in .3s;
-         }
+    .toggle .line2 {
+      transform: rotate(-45deg) translate(4px, -5px);
+      transition: ease-in 0.3s;
     }
-    
-    @media(max-width:991px) {
-        ul>li a{
-            padding: 0 30px;
-        }
-    }
-    @media(max-width:767px){
-        .burger{
-            display: block;
-        }
-        ul{
-            position: fixed;
-            height: calc(100vh - 80px);
-            top:80px;
-            right: -100%;
-            width: 100%;
-            background-color: $color-bk;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 60px 0;
-            opacity: 0;
-            transition: ease-in-out .5s;
-            
-        }
-        .nav-active{
-            right: 0%;
-            opacity: 1;
-            transition: ease-in-out .5s;
-        }
-
-        .toggle .line1{
-            transform: rotate(45deg) translate(5px,5px);
-            transition: ease-in .3s;
-        }
-        .toggle .line2{
-            transform: rotate(-45deg) translate(4px,-5px);
-            transition: ease-in .3s;
-        }
-        
-    }
+  }
 }
 
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/iphoneSE.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fade ease-in 1s;
 
-.banner{
+  > div {
     position: absolute;
-    top: 80px;
-    width: 100%;
-    height:80vh;
-    background-image: url(../img/iphoneSE.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: textFade ease-in 1s 0.5s forwards;
+    opacity: 0;
+    > h1 {
+      color: $color-wt;
+      font-family: $fontStyle-noto;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+    > h2 {
+      color: $color-wt;
+      font-family: $fontStyle-noto;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+    > a {
+      text-decoration: none;
+      > h3 {
+        margin-top: 20px;
+        color: $color-bl;
+      }
+    }
+    @media (max-width: 767px) {
+      > h1 {
+        font-size: 40px;
+      }
+      > h2 {
+        font-size: 20px;
+      }
+      a > h3 {
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 500px) {
+      > h1 {
+        font-size: 28px;
+      }
+      > h2 {
+        font-size: 18px;
+      }
+      a > h3 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    div {
+      align-items: auto;
+    }
+  }
+}
+
+@media (max-width: 1176px) {
+  .banner {
+    background-image: url(../img/iphoneSE-color.jpg);
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    background-image: url(../img/iPhone-SE-column.jpg);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes textFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#iPhone11 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/iphone-11.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  > div {
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    > h1 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+    > h2 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+    > a {
+      text-decoration: none;
+      > h3 {
+        margin-top: 20px;
+        color: $color-bl;
+      }
+    }
+    @media (max-width: 767px) {
+      > h1 {
+        font-size: 40px;
+      }
+      > h2 {
+        font-size: 20px;
+      }
+      a > h3 {
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 500px) {
+      > h1 {
+        font-size: 28px;
+      }
+      > h2 {
+        font-size: 18px;
+      }
+      a > h3 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    div {
+      align-items: auto;
+    }
+  }
+}
+
+@media (max-width: 1176px) {
+  #iPhone11 {
+    background-image: url(../img/iphone-11-1.jpg);
+    > div {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+@media (max-width: 767px) {
+  #iPhone11 {
+    background-image: url(../img/iphone11.png);
+    > div {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        > h1 {
+            color: $color-wt;
+          }
+          > h2 {
+            color: $color-wt;
+          }
+          > a {
+            text-decoration: none;
+            > h3 {
+              color: $color-bl;
+            }
+          }
+    }
+  }
 }
