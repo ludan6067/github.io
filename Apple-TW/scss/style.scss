@@ -14,7 +14,7 @@ $fontStyle-noto: "Noto Sans TC", sans-serif;
 
 nav {
   width: 100%;
-  height: 80px;
+  height: 50px;
   background-color: $color-bk;
   display: flex;
   justify-content: space-around;
@@ -40,6 +40,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    margin-bottom: unset;
+
     li > a {
       text-decoration: none;
       color: $color-wt;
@@ -49,9 +51,15 @@ nav {
       padding: 3px 50px;
 
       &:hover {
-        background-color: $color-rd;
+        background-color: $color-wt;
         border-radius: 5px;
         transition: ease-in 0.3s;
+        text-decoration: none;
+        color: $color-bk;
+        font-weight: 600;
+        > a {
+          text-decoration: none;
+        }
       }
     }
   }
@@ -108,8 +116,8 @@ nav {
     }
   }
 }
-
-.banner {
+// ---------------------------#iPhone SE-----------------------------
+#iPhone-SE {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -125,7 +133,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: textFade ease-in 1s 0.5s forwards;
+    animation: textFade ease-in 1s 0.8s forwards;
     opacity: 0;
     > h1 {
       color: $color-wt;
@@ -159,10 +167,10 @@ nav {
     }
     @media (max-width: 500px) {
       > h1 {
-        font-size: 28px;
+        font-size: 26px;
       }
       > h2 {
-        font-size: 18px;
+        font-size: 16px;
       }
       a > h3 {
         font-size: 14px;
@@ -178,12 +186,12 @@ nav {
 }
 
 @media (max-width: 1176px) {
-  .banner {
+  #iPhone-SE {
     background-image: url(../img/iphoneSE-color.jpg);
   }
 }
 @media (max-width: 767px) {
-  .banner {
+  #iPhone-SE {
     background-image: url(../img/iPhone-SE-column.jpg);
   }
 }
@@ -204,6 +212,7 @@ nav {
   }
 }
 
+// ---------------------------#iPhone11-----------------------------
 #iPhone11 {
   position: relative;
   width: 100%;
@@ -251,10 +260,10 @@ nav {
     }
     @media (max-width: 500px) {
       > h1 {
-        font-size: 28px;
+        font-size: 26px;
       }
       > h2 {
-        font-size: 18px;
+        font-size: 16px;
       }
       a > h3 {
         font-size: 14px;
@@ -283,22 +292,316 @@ nav {
   #iPhone11 {
     background-image: url(../img/iphone11.png);
     > div {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-        > h1 {
-            color: $color-wt;
-          }
-          > h2 {
-            color: $color-wt;
-          }
-          > a {
-            text-decoration: none;
-            > h3 {
-              color: $color-bl;
-            }
-          }
+      > h1 {
+        color: $color-wt;
+      }
+      > h2 {
+        color: $color-wt;
+      }
+      > a {
+        text-decoration: none;
+        > h3 {
+          color: $color-bl;
+        }
+      }
     }
   }
+}
+// -----------------------------#iPad Pro---------------------------------
+#iPad-pro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/iPad-pro.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  > div {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    right: 6%;
+    transform: translate(-6%, -40%);
+    > h1 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+    > h2 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+    > a {
+      text-decoration: none;
+      > h3 {
+        margin-top: 20px;
+        color: $color-bl;
+      }
+    }
+    @media (max-width: 767px) {
+      > h1 {
+        font-size: 40px;
+      }
+      > h2 {
+        font-size: 20px;
+      }
+      a > h3 {
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 500px) {
+      > h1 {
+        font-size: 26px;
+      }
+      > h2 {
+        font-size: 16px;
+      }
+      a > h3 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    div {
+      align-items: auto;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  #iPad-pro {
+    background-image: url(../img/iPad-pro-1.png);
+    > div {
+      top: 50%;
+      right: 5%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+@media (max-width: 767px) {
+  #iPad-pro {
+    background-image: url(../img/iPad-pro-2.png);
+    > div {
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      > h1 {
+        color: $color-bk;
+      }
+      > h2 {
+        color: $color-bk;
+      }
+      > a {
+        text-decoration: none;
+        > h3 {
+          color: $color-bl;
+        }
+      }
+    }
+  }
+}
+// -----------------------------#theme---------------------------------
+#theme {
+  .row {
+    margin-bottom: 10px;
+  }
+}
+// -------------iPhone11 Pro-------------
+#iPhone11-pro {
+  padding-right: 5px;
+  padding-left: 10px;
+}
+.apple-product {
+  > div {
+    overflow: hidden;
+    position: relative;
+    > img {
+      width: 100%;
+    }
+
+    > div.absolute-div {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      text-align: center;
+
+      > h1 {
+        color: $color-wt;
+        font-family: $fontStyle-noto;
+        letter-spacing: 3px;
+        font-size: 40px;
+      }
+      > h2 {
+        color: $color-wt;
+        font-family: $fontStyle-noto;
+        font-weight: 400;
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      > a {
+        text-decoration: none;
+        > h3 {
+          font-size: 18px;
+          margin-top: 20px;
+          color: $color-bl;
+        }
+      }
+      @media screen and(max-width:1400px) {
+        h1 {
+          font-size: 26px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+        a h3 {
+          font-size: 12px;
+        }
+      }
+      @media screen and(max-width:500px) {
+        h1 {
+          letter-spacing: unset;
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 12px;
+        }
+        a h3 {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #iPhone11-pro {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+// -------------WWDC20-------------
+#WWDC20 {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+@media (max-width: 767px) {
+  #WWDC20 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+// -------------Apple Watch-------------
+#apple-watch {
+  padding-right: 10px;
+  padding-left: 5px;
+
+  > div {
+    > .apple-watch-content {
+      > h1 {
+        color: $color-bk;
+      }
+      > h2 {
+        color: $color-bk;
+      }
+      > h3 {
+        color: $color-bk;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #apple-watch {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+// -------------woker-------------
+#woker {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+@media (max-width: 767px) {
+  #woker {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+// -------------apple-at-home-------------
+#apple-at-home {
+  padding-right: 5px;
+  padding-left: 10px;
+  > div {
+    .apple-at-home-content {
+      > h2 {
+        background: linear-gradient(to right, #80c0fc 0%, #52228d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #apple-at-home {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+// -------------Apple-tv-------------
+#Apple-tv{
+  padding-right: 10px;
+  padding-left: 5px;
+  > div {
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  #Apple-tv {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+// -----------------------------footer-------------------------
+#Apple-footer{
+  width: 100%;
+  background-color: $color-wt;
+
+  >div.container{
+    padding-top: 15px;
+    
+    >.instructions{
+      p{
+        color: rgb(88, 88, 88);
+        font-size: 12px;
+      }
+    }
+    >.divider{
+      margin: 20px 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgb(218, 218, 218)
+      
+    }
+  }
+
+  
 }

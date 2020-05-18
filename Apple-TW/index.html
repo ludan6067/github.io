@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
@@ -13,18 +17,18 @@
 
 <body>
     <h1 style="display: none;">Apple-Taiwan</h1>
-
+    <!-- ------------NAV------------------- -->
     <nav>
         <h1 style="display: none;">NAV</h1>
         <a href="" class="logo">
             <h2 style="display: none;">Apple</h2>
-            <img src="./img/apple-icon.png" alt="">
+            <img src="./img/apple-icon.png" alt="apple-icon">
 
         </a>
         <ul class="nav-links">
-            <li><a href="#">Mac</a></li>
-            <li><a href="#">iPad</a></li>
             <li><a href="#">iPhone</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">Mac</a></li>
             <li><a href="#">Watch</a></li>
         </ul>
         <div class="burger">
@@ -32,28 +36,167 @@
             <div class="line2"></div>
         </div>
     </nav>
-
-    <div class="banner">
+    <!-----------------iPhone-SE------------------->
+    <div id="iPhone-SE">
         <div>
             <h1>iPhone SE</h1>
             <h2>用更少的付出，讓世界更加精采。</h2>
             <h2>NT$14,500 起</h2>
-            <a href="#"><h3>馬上瞭解 &gt;</h3></a>
+            <a href="#">
+                <h3>馬上瞭解 &gt;</h3>
+            </a>
         </div>
     </div>
-
+    <!-----------------iPhone11------------------->
     <section id="iPhone11">
         <div>
             <h1>iPhone 11</h1>
             <h2>用繽紛，彩色你的世界。</h2>
             <h2>NT$19,400 起</h2>
-            <a href="#"><h3>馬上瞭解 &gt;</h3></a>
+            <a href="#">
+                <h3>馬上瞭解 &gt;</h3>
+            </a>
         </div>
     </section>
 
+    <section id="iPad-pro">
+        <div>
+            <h1>iPad Pro</h1>
+            <h2>你的下一台電腦，不是電腦。</h2>
+            <a href="#">
+                <h3>馬上瞭解 &gt;</h3>
+            </a>
+        </div>
+    </section>
+
+    <section id="theme">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="iPhone11-pro" class="apple-product col-12 col-md-6 no-gutters">
+                    <div>
+                        <div class="iPhone11Pro-content absolute-div ">
+                            <h1>iPhone 11 Pro </h1>
+                            <h2>相機、效能，重新Pro你的人生。</h2>
+                            <h2>NT$28,800 起</h2>
+                            <a href="#">
+                                <h3>馬上瞭解 &gt;</h3>
+                            </a>
+                        </div>
+
+                        <img src="./img/iphone11-pro.jpg" alt="iphone11-pro">
+                    </div>
+                </div>
+
+                <div id="WWDC20" class="apple-product col-12 col-md-6 no-gutters">
+                    <div>
+                        <div class="WWDC20-content absolute-div ">
+                            <h1>WWDC20</h1>
+                            <h2>太平洋夏令時間 6 月 22 日開動</h2>
+                            <h2>今年，全球開發者大會全程線上舉行，歡迎上線加入我們。</h2>
+                            <a href="#">
+                                <h3>進一步瞭解 &gt;</h3>
+                            </a>
+                        </div>
+
+                        <img src="./img/wwdc20.jpg" alt="wwdc20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="apple-watch" class="apple-product col-12 col-md-6 no-gutters">
+                    <div>
+                        <div class="apple-watch-content absolute-div ">
+                            <h1>iPhone 11 Pro </h1>
+                            <h2>相機、效能，重新Pro你的人生。</h2>
+                            <h2>NT$28,800 起</h2>
+                            <a href="#">
+                                <h3>馬上瞭解 &gt;</h3>
+                            </a>
+                        </div>
+
+                        <img src="./img/apple-watch.jpg" alt="apple-watch">
+                    </div>
+                </div>
+
+                <div id="woker" class="apple-product col-12 col-md-6 no-gutters">
+                    <div>
+                        <div class="woker-content absolute-div ">
+                            <h1>以人優先</h1>
+                            <h2>我們每一次製造的產品</h2>
+                            <h2>都保持著初衷與熱情。</h2>
+                            <a href="#">
+                                <h3>進一步瞭解 &gt;</h3>
+                            </a>
+                        </div>
+
+                        <img src="./img/worker.jpg" alt="Apple worker">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="apple-at-home" class="apple-product col-12 col-md-6 no-gutters">
+                    <div>
+                        <div class="apple-at-home-content absolute-div ">
+                            <h1>Today at Apple </h1>
+                            <img src="./img/athome.png" alt="apple-at-home">
+                            <h2>趣味十足的技巧影片</h2>
+                            <h2>讓你在家盡情揮灑創意。</h2>
+                            <a href="#">
+                                <h3>馬上瞭解 &gt;</h3>
+                            </a>
+                        </div>
+
+                        <img src="./img/apple-at-home.jpg" alt="apple-at-home">
+                    </div>
+                </div>
+
+                <div id="Apple-tv" class="col-12 col-md-6 no-gutters">
+                    <h1 style="display: none;">Apple-tv</h1>
+                    <div>
+                       <img src="./img/apple-tv.jpg" alt="apple-tv">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Apple-footer">
+        <div class="container">
+            <div class="instructions" aria-label="註腳">
+                <p>
+                    所示的 iPhone 11 Pro 64GB 機型價格是以 iPhone X 64GB 機型折抵換購的價格。所示的 iPhone 11 64GB 機型價格是以 iPhone 8 Plus 64GB 機型折抵換購的價格。所示的 iPhone SE 64GB 機型價格是以 iPhone 8 64GB 機型折抵換購的價格。本換購估價僅在購買全新 iPhone 時提供。供應狀況和限制可能會有所變動。實際換購估價視你折抵換購裝置的狀況、年份與配置而有所差異。Apple 的升級換購為 Apple 與 Apple 的換購合作夥伴合作推出。你必須至少年滿 20 歲，才有折抵換購的資格。店內換購須出示政府核發的有效照片證件，才能享有此項優惠。可能須遵守 Apple 或 Apple 的換購合作夥伴所訂立的其他條款。
+                </p>
+                <p>巧控鍵盤另售。</p>
+                <p>
+                    免額外付費的試用結束後，Apple TV+ 每月收費 NT$170。每個「家人共享」群組僅需一個訂閱方案。優惠須在符合條件裝置啟用後的 3 個月內訂閱。訂閱方案將自動續訂直到取消為止。須受限制與其他條款約束。
+                </p>
+            </div>
+            <div class="divider"></div>
+            <nav aria-label="Apple 指南" role="navigation">
+                <h3></h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
 
 
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
     <script src="./js/app.js"></script>
 </body>
