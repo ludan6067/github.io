@@ -606,8 +606,8 @@ nav .burger > div {
 }
 
 #apple-watch {
-  padding-right: 10px;
-  padding-left: 5px;
+  padding-right: 5px;
+  padding-left: 10px;
 }
 
 #apple-watch > div > .apple-watch-content > h1 {
