@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-nav {
+nav#navigation {
   width: 100%;
   height: 50px;
   background-color: #1d1d1f;
@@ -21,22 +21,22 @@ nav {
   z-index: 5;
 }
 
-nav a.logo {
+nav#navigation a.logo {
   width: 50px;
   height: 50px;
   margin: auto 0;
   overflow: hidden;
 }
 
-nav a.logo > img {
+nav#navigation a.logo > img {
   width: 100%;
 }
 
-nav a.logo h1 {
+nav#navigation a.logo h1 {
   display: none;
 }
 
-nav ul {
+nav#navigation ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,7 +53,7 @@ nav ul {
   margin-bottom: unset;
 }
 
-nav ul li > a {
+nav#navigation ul li > a {
   text-decoration: none;
   color: #eeeeee;
   font-family: "Poppins", sans-serif;
@@ -62,7 +62,7 @@ nav ul li > a {
   padding: 3px 50px;
 }
 
-nav ul li > a:hover {
+nav#navigation ul li > a:hover {
   background-color: #eeeeee;
   border-radius: 5px;
   -webkit-transition: ease-in 0.3s;
@@ -73,17 +73,17 @@ nav ul li > a:hover {
   font-weight: 600;
 }
 
-nav ul li > a:hover > a {
+nav#navigation ul li > a:hover > a {
   text-decoration: none;
 }
 
-nav .burger {
+nav#navigation .burger {
   cursor: pointer;
   margin: auto 0;
   display: none;
 }
 
-nav .burger > div {
+nav#navigation .burger > div {
   width: 25px;
   height: 3px;
   background-color: #eeeeee;
@@ -94,16 +94,16 @@ nav .burger > div {
 }
 
 @media (max-width: 991px) {
-  nav ul > li a {
+  nav#navigation ul > li a {
     padding: 0 30px;
   }
 }
 
 @media (max-width: 767px) {
-  nav .burger {
+  nav#navigation .burger {
     display: block;
   }
-  nav ul {
+  nav#navigation ul {
     position: fixed;
     height: calc(100vh - 80px);
     top: 80px;
@@ -124,14 +124,14 @@ nav .burger > div {
     -o-transition: ease-in-out 0.5s;
     transition: ease-in-out 0.5s;
   }
-  nav .nav-active {
+  nav#navigation .nav-active {
     right: 0%;
     opacity: 1;
     -webkit-transition: ease-in-out 0.5s;
     -o-transition: ease-in-out 0.5s;
     transition: ease-in-out 0.5s;
   }
-  nav .toggle .line1 {
+  nav#navigation .toggle .line1 {
     -webkit-transform: rotate(45deg) translate(5px, 5px);
         -ms-transform: rotate(45deg) translate(5px, 5px);
             transform: rotate(45deg) translate(5px, 5px);
@@ -139,7 +139,7 @@ nav .burger > div {
     -o-transition: ease-in 0.3s;
     transition: ease-in 0.3s;
   }
-  nav .toggle .line2 {
+  nav#navigation .toggle .line2 {
     -webkit-transform: rotate(-45deg) translate(4px, -5px);
         -ms-transform: rotate(-45deg) translate(4px, -5px);
             transform: rotate(-45deg) translate(4px, -5px);
@@ -468,16 +468,16 @@ nav .burger > div {
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1199px) {
   #iPad-pro {
     background-image: url(../img/iPad-pro-1.png);
   }
   #iPad-pro > div {
     top: 50%;
     right: 5%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-5%, -50%);
+        -ms-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
   }
 }
 
@@ -508,6 +508,12 @@ nav .burger > div {
 
 #theme .row {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  #theme {
+    margin-bottom: unset;
+  }
 }
 
 #iPhone11-pro {
@@ -706,4 +712,14 @@ nav .burger > div {
   width: 100%;
   height: 1px;
   background-color: #dadada;
+}
+
+#Apple-footer > div.container > nav#guid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }

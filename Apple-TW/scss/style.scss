@@ -377,13 +377,13 @@ nav#navigation {
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1199px) {
   #iPad-pro {
     background-image: url(../img/iPad-pro-1.png);
     > div {
       top: 50%;
       right: 5%;
-      transform: translate(-50%, -50%);
+      transform: translate(-5%, -50%);
     }
   }
 }
