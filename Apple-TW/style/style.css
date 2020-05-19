@@ -714,7 +714,7 @@ nav#navigation .burger > div {
   background-color: #dadada;
 }
 
-#Apple-footer > div.container > nav#guid {
+#Apple-footer > div.container > #apple-guide {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -722,4 +722,240 @@ nav#navigation .burger > div {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product input#select-product {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div ul {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account input#service {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account input#account {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store input#apple-store {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education input#business {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education input#education {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about input#value {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about input#about {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container section.more-info {
+  padding-top: 10px;
+}
+
+#Apple-footer > div.container section.more-info > div h4 {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container section#copyright {
+  text-align: center;
+}
+
+#Apple-footer > div.container section#copyright h4 {
+  font-size: 16px;
+  color: #af2525;
+  font-weight: 600;
+  line-height: unset;
+  margin-bottom: unset;
 }
