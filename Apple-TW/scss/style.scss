@@ -12,7 +12,7 @@ $fontStyle-noto: "Noto Sans TC", sans-serif;
   box-sizing: border-box;
 }
 
-nav {
+nav#navigation {
   width: 100%;
   height: 50px;
   background-color: $color-bk;
@@ -415,7 +415,11 @@ nav {
   .row {
     margin-bottom: 10px;
   }
+  @media screen and(max-width:767px){
+    margin-bottom: unset;
+  }
 }
+
 // -------------iPhone11 Pro-------------
 #iPhone11-pro {
   padding-right: 5px;
@@ -599,7 +603,10 @@ nav {
       width: 100%;
       height: 1px;
       background-color: rgb(218, 218, 218)
-      
+    }
+    >nav#guid{
+      display: flex;
+      flex-wrap: nowrap;
     }
   }
 
