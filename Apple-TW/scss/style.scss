@@ -10,6 +10,7 @@ $fontStyle-noto: "Noto Sans TC", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 nav#navigation {
@@ -163,6 +164,7 @@ nav#navigation {
 
       > h3 {
         margin-top: 20px;
+        font-family: $fontStyle-noto;
         color: $color-bl;
       }
     }
@@ -267,6 +269,7 @@ nav#navigation {
     }
 
     > a {
+      font-family: $fontStyle-noto;
       text-decoration: none;
 
       > h3 {
@@ -383,6 +386,7 @@ nav#navigation {
     }
 
     > a {
+      font-family: $fontStyle-noto;
       text-decoration: none;
 
       > h3 {
@@ -471,6 +475,7 @@ nav#navigation {
 #theme {
   .row {
     margin-bottom: 10px;
+    overflow: hidden;
   }
 
   @media screen and(max-width:767px) {
@@ -519,11 +524,11 @@ nav#navigation {
 
       > a {
         text-decoration: none;
-
         > h3 {
           font-size: 18px;
-          margin-top: 20px;
+          font-family: $fontStyle-noto;
           color: $color-bl;
+          margin-top: 20px;
         }
       }
 
@@ -725,6 +730,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -753,6 +759,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -776,6 +783,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -801,7 +809,8 @@ nav#navigation {
             margin-bottom: unset;
             h3 {
               font-size: 12px;
-              font-weight: 700;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -828,6 +837,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -851,6 +861,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -877,6 +888,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -900,6 +912,7 @@ nav#navigation {
             h3 {
               font-size: 12px;
               font-weight: 600;
+              font-family: $fontStyle-noto;
               color: $color-bk;
             }
           }
@@ -1237,6 +1250,7 @@ nav#navigation {
       > div {
         h4 {
           font-size: 12px;
+          font-family: $fontStyle-noto;
           color: $color-bk;
         }
       }
@@ -1247,8 +1261,10 @@ nav#navigation {
         font-size: 16px;
         color: $color-rd;
         font-weight: 600;
+        font-family: $fontStyle-noto;
         line-height: unset;
         margin-bottom: unset;
+        padding-bottom: 20px;
       }
     }
   }

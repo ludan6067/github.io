@@ -21,3 +21,10 @@ const navSlide = () => {
     // 箭頭函式,navSlide=()=>{ } 相當於 navSlide=function(){ }
     // toggle，撥動開關，偵測變數nav裡面有沒有.nav-active這個class，如果有就刪掉，沒有就加進去
     // 監聽事件,addEventListener('什麼時候要做', 做什麼事(){  })
+
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out'
+
+
+    });
