@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-nav {
+nav#navigation {
   width: 100%;
   height: 50px;
   background-color: #1d1d1f;
@@ -21,22 +21,22 @@ nav {
   z-index: 5;
 }
 
-nav a.logo {
+nav#navigation a.logo {
   width: 50px;
   height: 50px;
   margin: auto 0;
   overflow: hidden;
 }
 
-nav a.logo > img {
+nav#navigation a.logo > img {
   width: 100%;
 }
 
-nav a.logo h1 {
+nav#navigation a.logo h1 {
   display: none;
 }
 
-nav ul {
+nav#navigation ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,7 +53,7 @@ nav ul {
   margin-bottom: unset;
 }
 
-nav ul li > a {
+nav#navigation ul li > a {
   text-decoration: none;
   color: #eeeeee;
   font-family: "Poppins", sans-serif;
@@ -62,7 +62,7 @@ nav ul li > a {
   padding: 3px 50px;
 }
 
-nav ul li > a:hover {
+nav#navigation ul li > a:hover {
   background-color: #eeeeee;
   border-radius: 5px;
   -webkit-transition: ease-in 0.3s;
@@ -73,17 +73,17 @@ nav ul li > a:hover {
   font-weight: 600;
 }
 
-nav ul li > a:hover > a {
+nav#navigation ul li > a:hover > a {
   text-decoration: none;
 }
 
-nav .burger {
+nav#navigation .burger {
   cursor: pointer;
   margin: auto 0;
   display: none;
 }
 
-nav .burger > div {
+nav#navigation .burger > div {
   width: 25px;
   height: 3px;
   background-color: #eeeeee;
@@ -94,19 +94,19 @@ nav .burger > div {
 }
 
 @media (max-width: 991px) {
-  nav ul > li a {
+  nav#navigation ul > li a {
     padding: 0 30px;
   }
 }
 
 @media (max-width: 767px) {
-  nav .burger {
+  nav#navigation .burger {
     display: block;
   }
-  nav ul {
+  nav#navigation ul {
     position: fixed;
-    height: calc(100vh - 80px);
-    top: 80px;
+    height: calc(100vh - 50px);
+    top: 50px;
     right: -100%;
     width: 100%;
     background-color: #1d1d1f;
@@ -124,14 +124,14 @@ nav .burger > div {
     -o-transition: ease-in-out 0.5s;
     transition: ease-in-out 0.5s;
   }
-  nav .nav-active {
+  nav#navigation .nav-active {
     right: 0%;
     opacity: 1;
     -webkit-transition: ease-in-out 0.5s;
     -o-transition: ease-in-out 0.5s;
     transition: ease-in-out 0.5s;
   }
-  nav .toggle .line1 {
+  nav#navigation .toggle .line1 {
     -webkit-transform: rotate(45deg) translate(5px, 5px);
         -ms-transform: rotate(45deg) translate(5px, 5px);
             transform: rotate(45deg) translate(5px, 5px);
@@ -139,7 +139,7 @@ nav .burger > div {
     -o-transition: ease-in 0.3s;
     transition: ease-in 0.3s;
   }
-  nav .toggle .line2 {
+  nav#navigation .toggle .line2 {
     -webkit-transform: rotate(-45deg) translate(4px, -5px);
         -ms-transform: rotate(-45deg) translate(4px, -5px);
             transform: rotate(-45deg) translate(4px, -5px);
@@ -468,16 +468,16 @@ nav .burger > div {
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1199px) {
   #iPad-pro {
     background-image: url(../img/iPad-pro-1.png);
   }
   #iPad-pro > div {
     top: 50%;
     right: 5%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-5%, -50%);
+        -ms-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
   }
 }
 
@@ -508,6 +508,12 @@ nav .burger > div {
 
 #theme .row {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  #theme .row {
+    margin-bottom: unset;
+  }
 }
 
 #iPhone11-pro {
@@ -706,4 +712,461 @@ nav .burger > div {
   width: 100%;
   height: 1px;
   background-color: #dadada;
+}
+
+#Apple-footer > div.container > #apple-guide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product input#select-product {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div ul {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#Apple-footer > div.container > #apple-guide > div.select-product > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account input#service {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account input#account {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.service-account > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store input#apple-store {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div label h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.apple-store > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education input#business {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education input#education {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.business-education > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about input#value {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about input#about {
+  display: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label {
+  margin-bottom: unset;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div label h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul {
+  list-style: none;
+}
+
+#Apple-footer > div.container > #apple-guide > div.value-about > div ul li a {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+@media screen and (max-width: 767px) {
+  #Apple-footer > div.container #apple-guide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #Apple-footer > div.container #apple-guide .select-product {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    border-bottom: 1px solid #dadada;
+  }
+  #Apple-footer > div.container #apple-guide .select-product > input#select-product:checked ~ div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .select-product > div > ul {
+    display: none;
+  }
+  #Apple-footer > div.container #apple-guide .select-product > div > label h3 {
+    cursor: pointer;
+  }
+  #Apple-footer > div.container #apple-guide .select-product > div > label h3::after {
+    content: "+";
+    float: right;
+    font-size: 14px;
+    margin-left: 400px;
+  }
+  #Apple-footer > div.container #apple-guide .service-account > div {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    border-bottom: 1px solid #dadada;
+  }
+  #Apple-footer > div.container #apple-guide .service-account > div ul {
+    display: none;
+  }
+  #Apple-footer > div.container #apple-guide .service-account > input#service:checked ~ div.service-div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .service-account > input#account:checked ~ div.account-div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .service-account > div > label h3 {
+    cursor: pointer;
+  }
+  #Apple-footer > div.container #apple-guide .service-account > div > label h3::after {
+    content: "+";
+    float: right;
+    font-size: 14px;
+    margin-left: 465px;
+  }
+  #Apple-footer > div.container #apple-guide .apple-store {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    border-bottom: 1px solid #dadada;
+  }
+  #Apple-footer > div.container #apple-guide .apple-store > input#apple-store:checked ~ div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .apple-store > div > ul {
+    display: none;
+  }
+  #Apple-footer > div.container #apple-guide .apple-store > div > label h3 {
+    cursor: pointer;
+  }
+  #Apple-footer > div.container #apple-guide .apple-store > div > label h3::after {
+    content: "+";
+    float: right;
+    font-size: 14px;
+    margin-left: 425px;
+  }
+  #Apple-footer > div.container #apple-guide .business-education > div {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    border-bottom: 1px solid #dadada;
+  }
+  #Apple-footer > div.container #apple-guide .business-education > div ul {
+    display: none;
+  }
+  #Apple-footer > div.container #apple-guide .business-education > input#business:checked ~ div.business-div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .business-education > input#education:checked ~ div.education-div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .business-education > div > label h3 {
+    cursor: pointer;
+  }
+  #Apple-footer > div.container #apple-guide .business-education > div > label h3::after {
+    content: "+";
+    float: right;
+    font-size: 14px;
+    margin-left: 440px;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > div {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    border-bottom: 1px solid #dadada;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > div ul {
+    display: none;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > input#value:checked ~ div.value-div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > input#about:checked ~ div.about-div > ul {
+    display: block;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > div > label.value h3 {
+    cursor: pointer;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > div > label.value h3::after {
+    content: "+";
+    float: right;
+    font-size: 14px;
+    margin-left: 405px;
+  }
+  #Apple-footer > div.container #apple-guide .value-about > div > label.about h3::after {
+    content: "+";
+    float: right;
+    font-size: 14px;
+    margin-left: 431px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #Apple-footer > div.container #apple-guide > .select-product > div > label h3::after {
+    margin-left: 350px;
+  }
+  #Apple-footer > div.container #apple-guide > .service-account .service-div > label h3::after {
+    margin-left: 415px;
+  }
+  #Apple-footer > div.container #apple-guide > .service-account .account-div > label h3::after {
+    margin-left: 415px;
+  }
+  #Apple-footer > div.container #apple-guide > .apple-store > div > label h3::after {
+    margin-left: 375px;
+  }
+  #Apple-footer > div.container #apple-guide > .business-education .business-div > label h3::after {
+    margin-left: 390px;
+  }
+  #Apple-footer > div.container #apple-guide > .business-education .education-div > label h3::after {
+    margin-left: 390px;
+  }
+  #Apple-footer > div.container #apple-guide > .value-about .value-div > label.value h3::after {
+    margin-left: 355px;
+  }
+  #Apple-footer > div.container #apple-guide > .value-about .about-div > label.about h3::after {
+    margin-left: 381px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #Apple-footer > div.container #apple-guide > .select-product > div > label h3::after {
+    margin-left: 230px;
+  }
+  #Apple-footer > div.container #apple-guide > .service-account .service-div > label h3::after {
+    margin-left: 295px;
+  }
+  #Apple-footer > div.container #apple-guide > .service-account .account-div > label h3::after {
+    margin-left: 295px;
+  }
+  #Apple-footer > div.container #apple-guide > .apple-store > div > label h3::after {
+    margin-left: 255px;
+  }
+  #Apple-footer > div.container #apple-guide > .business-education .business-div > label h3::after {
+    margin-left: 270px;
+  }
+  #Apple-footer > div.container #apple-guide > .business-education .education-div > label h3::after {
+    margin-left: 270px;
+  }
+  #Apple-footer > div.container #apple-guide > .value-about .value-div > label.value h3::after {
+    margin-left: 235px;
+  }
+  #Apple-footer > div.container #apple-guide > .value-about .about-div > label.about h3::after {
+    margin-left: 261px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #Apple-footer > div.container #apple-guide > .select-product > div > label h3::after {
+    margin-left: 180px;
+  }
+  #Apple-footer > div.container #apple-guide > .service-account .service-div > label h3::after {
+    margin-left: 245px;
+  }
+  #Apple-footer > div.container #apple-guide > .service-account .account-div > label h3::after {
+    margin-left: 245px;
+  }
+  #Apple-footer > div.container #apple-guide > .apple-store > div > label h3::after {
+    margin-left: 205px;
+  }
+  #Apple-footer > div.container #apple-guide > .business-education .business-div > label h3::after {
+    margin-left: 220px;
+  }
+  #Apple-footer > div.container #apple-guide > .business-education .education-div > label h3::after {
+    margin-left: 220px;
+  }
+  #Apple-footer > div.container #apple-guide > .value-about .value-div > label.value h3::after {
+    margin-left: 185px;
+  }
+  #Apple-footer > div.container #apple-guide > .value-about .about-div > label.about h3::after {
+    margin-left: 211px;
+  }
+}
+
+#Apple-footer > div.container section.more-info {
+  padding-top: 20px;
+}
+
+#Apple-footer > div.container section.more-info > div h4 {
+  font-size: 12px;
+  color: #1d1d1f;
+}
+
+#Apple-footer > div.container section#copyright {
+  text-align: center;
+}
+
+#Apple-footer > div.container section#copyright h4 {
+  font-size: 16px;
+  color: #af2525;
+  font-weight: 600;
+  line-height: unset;
+  margin-bottom: unset;
 }
