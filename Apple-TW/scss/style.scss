@@ -540,6 +540,21 @@ nav#navigation {
           font-size: 12px;
         }
       }
+      
+      @media screen and(max-width:900px) {
+        h1 {
+          letter-spacing: unset;
+          font-size: 20px;
+        }
+
+        h2 {
+          font-size: 12px;
+        }
+
+        a h3 {
+          font-size: 10px;
+        }
+      }
 
       @media screen and(max-width:500px) {
         h1 {

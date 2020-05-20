@@ -577,6 +577,19 @@ nav#navigation .burger > div {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .apple-product > div > div.absolute-div h1 {
+    letter-spacing: unset;
+    font-size: 20px;
+  }
+  .apple-product > div > div.absolute-div h2 {
+    font-size: 12px;
+  }
+  .apple-product > div > div.absolute-div a h3 {
+    font-size: 10px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .apple-product > div > div.absolute-div h1 {
     letter-spacing: unset;
