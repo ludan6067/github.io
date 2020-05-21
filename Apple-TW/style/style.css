@@ -993,7 +993,7 @@ nav#navigation .burger > div {
     content: "+";
     float: right;
     font-size: 14px;
-    margin-left: 400px;
+    margin-left: 405px;
   }
   #Apple-footer > div.container #apple-guide .service-account > div {
     -webkit-flex-basis: auto;
@@ -1038,7 +1038,7 @@ nav#navigation .burger > div {
     content: "+";
     float: right;
     font-size: 14px;
-    margin-left: 425px;
+    margin-left: 420px;
   }
   #Apple-footer > div.container #apple-guide .business-education > div {
     -webkit-flex-basis: auto;
@@ -1086,19 +1086,19 @@ nav#navigation .burger > div {
     content: "+";
     float: right;
     font-size: 14px;
-    margin-left: 405px;
+    margin-left: 403px;
   }
   #Apple-footer > div.container #apple-guide .value-about > div > label.about h3::after {
     content: "+";
     float: right;
     font-size: 14px;
-    margin-left: 431px;
+    margin-left: 427px;
   }
 }
 
 @media screen and (max-width: 576px) {
   #Apple-footer > div.container #apple-guide > .select-product > div > label h3::after {
-    margin-left: 350px;
+    margin-left: 355px;
   }
   #Apple-footer > div.container #apple-guide > .service-account .service-div > label h3::after {
     margin-left: 415px;
@@ -1107,7 +1107,7 @@ nav#navigation .burger > div {
     margin-left: 415px;
   }
   #Apple-footer > div.container #apple-guide > .apple-store > div > label h3::after {
-    margin-left: 375px;
+    margin-left: 370px;
   }
   #Apple-footer > div.container #apple-guide > .business-education .business-div > label h3::after {
     margin-left: 390px;
@@ -1116,16 +1116,16 @@ nav#navigation .burger > div {
     margin-left: 390px;
   }
   #Apple-footer > div.container #apple-guide > .value-about .value-div > label.value h3::after {
-    margin-left: 355px;
+    margin-left: 353px;
   }
   #Apple-footer > div.container #apple-guide > .value-about .about-div > label.about h3::after {
-    margin-left: 381px;
+    margin-left: 377px;
   }
 }
 
 @media screen and (max-width: 490px) {
   #Apple-footer > div.container #apple-guide > .select-product > div > label h3::after {
-    margin-left: 230px;
+    margin-left: 235px;
   }
   #Apple-footer > div.container #apple-guide > .service-account .service-div > label h3::after {
     margin-left: 295px;
@@ -1134,7 +1134,7 @@ nav#navigation .burger > div {
     margin-left: 295px;
   }
   #Apple-footer > div.container #apple-guide > .apple-store > div > label h3::after {
-    margin-left: 255px;
+    margin-left: 250px;
   }
   #Apple-footer > div.container #apple-guide > .business-education .business-div > label h3::after {
     margin-left: 270px;
@@ -1143,16 +1143,16 @@ nav#navigation .burger > div {
     margin-left: 270px;
   }
   #Apple-footer > div.container #apple-guide > .value-about .value-div > label.value h3::after {
-    margin-left: 235px;
+    margin-left: 233px;
   }
   #Apple-footer > div.container #apple-guide > .value-about .about-div > label.about h3::after {
-    margin-left: 261px;
+    margin-left: 257px;
   }
 }
 
 @media screen and (max-width: 374px) {
   #Apple-footer > div.container #apple-guide > .select-product > div > label h3::after {
-    margin-left: 180px;
+    margin-left: 185px;
   }
   #Apple-footer > div.container #apple-guide > .service-account .service-div > label h3::after {
     margin-left: 245px;
@@ -1161,7 +1161,7 @@ nav#navigation .burger > div {
     margin-left: 245px;
   }
   #Apple-footer > div.container #apple-guide > .apple-store > div > label h3::after {
-    margin-left: 205px;
+    margin-left: 200px;
   }
   #Apple-footer > div.container #apple-guide > .business-education .business-div > label h3::after {
     margin-left: 220px;
@@ -1170,10 +1170,10 @@ nav#navigation .burger > div {
     margin-left: 220px;
   }
   #Apple-footer > div.container #apple-guide > .value-about .value-div > label.value h3::after {
-    margin-left: 185px;
+    margin-left: 183px;
   }
   #Apple-footer > div.container #apple-guide > .value-about .about-div > label.about h3::after {
-    margin-left: 211px;
+    margin-left: 207px;
   }
 }
 
