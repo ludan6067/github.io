@@ -1939,10 +1939,8 @@
         window.onscroll = function () {
             var nowScrollTop_safari = document.body.scrollTop
             var nowScrollTop_google = document.documentElement.scrollTop
-            var navSection = document.querySelector('#navSection')
             var scrollPic = document.querySelector('.scrollPic')
-            var gototop = document.querySelector('.gototop')
-            // 滑鼠
+      
             if (nowScrollTop_safari > 200 || nowScrollTop_google > 200) {
 
                 scrollPic.classList.add('hideScroll')
