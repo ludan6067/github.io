@@ -1,0 +1,1271 @@
+$color-bk: #1d1d1f;
+$color-wt: rgb(238, 238, 238);
+$color-rd: rgb(175, 37, 37);
+$color-bl: rgb(38, 109, 240);
+$color-grey: grey;
+$fontStyle-pop: "Poppins", sans-serif;
+$fontStyle-noto: "Noto Sans TC", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+nav#navigation {
+  width: 100%;
+  height: 50px;
+  background-color: $color-bk;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+
+  a.logo {
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+    }
+
+    h1 {
+      display: none;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-bottom: unset;
+
+    li > a {
+      text-decoration: none;
+      color: $color-wt;
+      font-family: $fontStyle-pop;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 3px 50px;
+
+      &:hover {
+        background-color: $color-wt;
+        border-radius: 5px;
+        transition: ease-in 0.3s;
+        text-decoration: none;
+        color: $color-bk;
+        font-weight: 600;
+
+        > a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .burger {
+    cursor: pointer;
+    margin: auto 0;
+    display: none;
+
+    > div {
+      width: 25px;
+      height: 3px;
+      background-color: $color-wt;
+      margin: 10px;
+      transition: ease-in 0.3s;
+    }
+  }
+
+  @media (max-width: 991px) {
+    ul > li a {
+      padding: 0 30px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .burger {
+      display: block;
+    }
+
+    ul {
+      position: fixed;
+      height: calc(100vh - 50px);
+      top: 50px;
+      right: -100%;
+      width: 100%;
+      background-color: $color-bk;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 60px 0;
+      opacity: 0;
+      transition: ease-in-out 0.5s;
+    }
+
+    .nav-active {
+      right: 0%;
+      opacity: 1;
+      transition: ease-in-out 0.5s;
+    }
+
+    .toggle .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: ease-in 0.3s;
+    }
+
+    .toggle .line2 {
+      transform: rotate(-45deg) translate(4px, -5px);
+      transition: ease-in 0.3s;
+    }
+  }
+}
+
+// ---------------------------#iPhone SE-----------------------------
+#iPhone-SE {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/iphoneSE.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fade ease-in 1s;
+
+  > div {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: textFade ease-in 1s 0.8s forwards;
+    opacity: 0;
+
+    > h1 {
+      color: $color-wt;
+      font-family: $fontStyle-noto;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+
+    > h2 {
+      color: $color-wt;
+      font-family: $fontStyle-noto;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    > a {
+      text-decoration: none;
+
+      > h3 {
+        margin-top: 20px;
+        font-family: $fontStyle-noto;
+        color: $color-bl;
+      }
+    }
+
+    @media (max-width: 767px) {
+      > h1 {
+        font-size: 40px;
+      }
+
+      > h2 {
+        font-size: 20px;
+      }
+
+      a > h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      > h1 {
+        font-size: 26px;
+      }
+
+      > h2 {
+        font-size: 16px;
+      }
+
+      a > h3 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    div {
+      align-items: auto;
+    }
+  }
+}
+
+@media (max-width: 1176px) {
+  #iPhone-SE {
+    background-image: url(../img/iphoneSE-color.jpg);
+  }
+}
+
+@media (max-width: 767px) {
+  #iPhone-SE {
+    background-image: url(../img/iPhone-SE-column.jpg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// ---------------------------#iPhone11-----------------------------
+#iPhone11 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/iPhone-11.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  > div {
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    > h1 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+
+    > h2 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    > a {
+      font-family: $fontStyle-noto;
+      text-decoration: none;
+
+      > h3 {
+        margin-top: 20px;
+        color: $color-bl;
+      }
+    }
+
+    @media (max-width: 767px) {
+      > h1 {
+        font-size: 40px;
+      }
+
+      > h2 {
+        font-size: 20px;
+      }
+
+      a > h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      > h1 {
+        font-size: 26px;
+      }
+
+      > h2 {
+        font-size: 16px;
+      }
+
+      a > h3 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    div {
+      align-items: auto;
+    }
+  }
+}
+
+@media (max-width: 1176px) {
+  #iPhone11 {
+    background-image: url(../img/iPhone-11-1.jpg);
+
+    > div {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #iPhone11 {
+    background-image: url(../img/iphone11.png);
+
+    > div {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      > h1 {
+        color: $color-wt;
+      }
+
+      > h2 {
+        color: $color-wt;
+      }
+
+      > a {
+        text-decoration: none;
+
+        > h3 {
+          color: $color-bl;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------#iPad Pro---------------------------------
+#iPad-pro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/iPad-pro.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  > div {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    right: 6%;
+    transform: translate(-6%, -40%);
+
+    > h1 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+
+    > h2 {
+      color: $color-bk;
+      font-family: $fontStyle-noto;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    > a {
+      font-family: $fontStyle-noto;
+      text-decoration: none;
+
+      > h3 {
+        margin-top: 20px;
+        color: $color-bl;
+      }
+    }
+
+    @media (max-width: 767px) {
+      > h1 {
+        font-size: 40px;
+      }
+
+      > h2 {
+        font-size: 20px;
+      }
+
+      a > h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      > h1 {
+        font-size: 26px;
+      }
+
+      > h2 {
+        font-size: 16px;
+      }
+
+      a > h3 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    div {
+      align-items: auto;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #iPad-pro {
+    background-image: url(../img/iPad-pro-1.png);
+
+    > div {
+      top: 50%;
+      right: 5%;
+      transform: translate(-5%, -50%);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #iPad-pro {
+    background-image: url(../img/iPad-pro-2.png);
+
+    > div {
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      > h1 {
+        color: $color-bk;
+      }
+
+      > h2 {
+        color: $color-bk;
+      }
+
+      > a {
+        text-decoration: none;
+
+        > h3 {
+          color: $color-bl;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------#theme---------------------------------
+#theme {
+  .row {
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  @media screen and(max-width:767px) {
+    .row {
+      margin-bottom: unset;
+    }
+  }
+}
+
+// -------------iPhone11 Pro-------------
+#iPhone11-pro {
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+.apple-product {
+  > div {
+    overflow: hidden;
+    position: relative;
+
+    > img {
+      width: 100%;
+    }
+
+    > div.absolute-div {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      text-align: center;
+
+      > h1 {
+        color: $color-wt;
+        font-family: $fontStyle-noto;
+        letter-spacing: 3px;
+        font-size: 40px;
+      }
+
+      > h2 {
+        color: $color-wt;
+        font-family: $fontStyle-noto;
+        font-weight: 400;
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      > a {
+        text-decoration: none;
+        > h3 {
+          font-size: 18px;
+          font-family: $fontStyle-noto;
+          color: $color-bl;
+          margin-top: 20px;
+        }
+      }
+
+      @media screen and(max-width:1400px) {
+        h1 {
+          font-size: 26px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        a h3 {
+          font-size: 12px;
+        }
+      }
+      
+      @media screen and(max-width:900px) {
+        h1 {
+          letter-spacing: unset;
+          font-size: 20px;
+        }
+
+        h2 {
+          font-size: 12px;
+        }
+
+        a h3 {
+          font-size: 10px;
+        }
+      }
+
+      @media screen and(max-width:500px) {
+        h1 {
+          letter-spacing: unset;
+          font-size: 22px;
+        }
+
+        h2 {
+          font-size: 12px;
+        }
+
+        a h3 {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #iPhone11-pro {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+// -------------WWDC20-------------
+#WWDC20 {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+@media (max-width: 767px) {
+  #WWDC20 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+// -------------Apple Watch-------------
+#apple-watch {
+  padding-right: 5px;
+  padding-left: 10px;
+
+  > div {
+    > .apple-watch-content {
+      > h1 {
+        color: $color-bk;
+      }
+
+      > h2 {
+        color: $color-bk;
+      }
+
+      > h3 {
+        color: $color-bk;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #apple-watch {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+// -------------woker-------------
+#woker {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+@media (max-width: 767px) {
+  #woker {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+// -------------apple-at-home-------------
+#apple-at-home {
+  padding-right: 5px;
+  padding-left: 10px;
+
+  > div {
+    .apple-at-home-content {
+      > h2 {
+        background: linear-gradient(to right, #80c0fc 0%, #52228d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #apple-at-home {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+// -------------Apple-tv-------------
+#Apple-tv {
+  padding-right: 10px;
+  padding-left: 5px;
+
+  > div {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #Apple-tv {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+// -----------------------------footer-------------------------
+#Apple-footer {
+  width: 100%;
+  background-color: $color-wt;
+
+  > div.container {
+    padding-top: 15px;
+
+    > .instructions {
+      p {
+        color: rgb(88, 88, 88);
+        font-size: 12px;
+      }
+    }
+
+    > .divider {
+      margin: 20px 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgb(218, 218, 218);
+    }
+
+    > #apple-guide {
+      display: flex;
+      flex-wrap: nowrap;
+
+      > div.select-product {
+        flex-basis: 20%;
+        input#select-product {
+          display: none;
+        }
+
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            margin-right: 20px;
+
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+      }
+
+      > div.service-account {
+        flex-basis: 20%;
+        input#service {
+          display: none;
+        }
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+
+        input#account {
+          display: none;
+        }
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+      }
+
+      > div.apple-store {
+        flex-basis: 20%;
+        input#apple-store {
+          display: none;
+        }
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+      }
+
+      > div.business-education {
+        flex-basis: 20%;
+        input#business {
+          display: none;
+        }
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+
+        input#education {
+          display: none;
+        }
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+      }
+
+      > div.value-about {
+        input#value {
+          display: none;
+        }
+        > div {
+          flex-basis: 20%;
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+
+        input#about {
+          display: none;
+        }
+        > div {
+          label {
+            margin-bottom: unset;
+            h3 {
+              font-size: 12px;
+              font-weight: 600;
+              font-family: $fontStyle-noto;
+              color: $color-bk;
+            }
+          }
+          ul {
+            list-style: none;
+            li {
+              a {
+                font-size: 12px;
+                color: $color-bk;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and(max-width: 767px) {
+      #apple-guide {
+        flex-direction: column;
+
+        .select-product {
+          flex-basis: auto;
+          border-bottom: 1px solid rgb(218, 218, 218);
+          > input#select-product:checked ~ div > ul {
+            display: block;
+          }
+          > div > ul {
+            display: none;
+          }
+          > div > label {
+            h3 {
+              cursor: pointer;
+            }
+            h3::after {
+              content: "+";
+              float: right;
+              font-size: 14px;
+              margin-left: 405px;
+            }
+          }
+        }
+
+        .service-account {
+          > div {
+            flex-basis: auto;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            ul {
+              display: none;
+            }
+          }
+          > input#service:checked ~ div.service-div > ul {
+            display: block;
+          }
+          > input#account:checked ~ div.account-div > ul {
+            display: block;
+          }
+          > div > label {
+            h3 {
+              cursor: pointer;
+            }
+            h3::after {
+              content: "+";
+              float: right;
+              font-size: 14px;
+              margin-left: 465px;
+            }
+          }
+        }
+
+        .apple-store {
+          flex-basis: auto;
+          border-bottom: 1px solid rgb(218, 218, 218);
+          > input#apple-store:checked ~ div > ul {
+            display: block;
+          }
+          > div > ul {
+            display: none;
+          }
+          > div > label {
+            h3 {
+              cursor: pointer;
+            }
+            h3::after {
+              content: "+";
+              float: right;
+              font-size: 14px;
+              margin-left: 420px;
+            }
+          }
+        }
+
+        .business-education {
+          > div {
+            flex-basis: auto;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            ul {
+              display: none;
+            }
+          }
+          > input#business:checked ~ div.business-div > ul {
+            display: block;
+          }
+          > input#education:checked ~ div.education-div > ul {
+            display: block;
+          }
+          > div > label {
+            h3 {
+              cursor: pointer;
+            }
+            h3::after {
+              content: "+";
+              float: right;
+              font-size: 14px;
+              margin-left: 440px;
+            }
+          }
+        }
+
+        .value-about {
+          > div {
+            flex-basis: auto;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            ul {
+              display: none;
+            }
+          }
+          > input#value:checked ~ div.value-div > ul {
+            display: block;
+          }
+          > input#about:checked ~ div.about-div > ul {
+            display: block;
+          }
+          > div > label.value {
+            h3 {
+              cursor: pointer;
+            }
+            h3::after {
+              content: "+";
+              float: right;
+              font-size: 14px;
+              margin-left: 403px;
+            }
+          }
+          > div > label.about {
+            h3::after {
+              content: "+";
+              float: right;
+              font-size: 14px;
+              margin-left: 427px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and(max-width: 576px) {
+      #apple-guide {
+        > .select-product {
+          > div > label {
+            h3::after {
+              margin-left: 355px;
+            }
+          }
+        }
+
+        > .service-account {
+          .service-div > label {
+            h3::after {
+              margin-left: 415px;
+            }
+          }
+          .account-div > label {
+            h3::after {
+              margin-left: 415px;
+            }
+          }
+        }
+
+        > .apple-store {
+          > div > label {
+            h3::after {
+              margin-left: 370px;
+            }
+          }
+        }
+
+        > .business-education {
+          .business-div > label {
+            h3::after {
+              margin-left: 390px;
+            }
+          }
+          .education-div > label {
+            h3::after {
+              margin-left: 390px;
+            }
+          }
+        }
+
+        > .value-about {
+          .value-div > label.value {
+            h3::after {
+              margin-left: 353px;
+            }
+          }
+          .about-div > label.about {
+            h3::after {
+              margin-left: 377px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and(max-width: 490px) {
+      #apple-guide {
+        > .select-product {
+          > div > label {
+            h3::after {
+              margin-left: 235px;
+            }
+          }
+        }
+
+        > .service-account {
+          .service-div > label {
+            h3::after {
+              margin-left: 295px;
+            }
+          }
+          .account-div > label {
+            h3::after {
+              margin-left: 295px;
+            }
+          }
+        }
+
+        > .apple-store {
+          > div > label {
+            h3::after {
+              margin-left: 250px;
+            }
+          }
+        }
+
+        > .business-education {
+          .business-div > label {
+            h3::after {
+              margin-left: 270px;
+            }
+          }
+          .education-div > label {
+            h3::after {
+              margin-left: 270px;
+            }
+          }
+        }
+
+        > .value-about {
+          .value-div > label.value {
+            h3::after {
+              margin-left: 233px;
+            }
+          }
+          .about-div > label.about {
+            h3::after {
+              margin-left: 257px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and(max-width: 374px) {
+      #apple-guide {
+        > .select-product {
+          > div > label {
+            h3::after {
+              margin-left: 185px;
+            }
+          }
+        }
+
+        > .service-account {
+          .service-div > label {
+            h3::after {
+              margin-left: 245px;
+            }
+          }
+          .account-div > label {
+            h3::after {
+              margin-left: 245px;
+            }
+          }
+        }
+
+        > .apple-store {
+          > div > label {
+            h3::after {
+              margin-left: 200px;
+            }
+          }
+        }
+
+        > .business-education {
+          .business-div > label {
+            h3::after {
+              margin-left: 220px;
+            }
+          }
+          .education-div > label {
+            h3::after {
+              margin-left: 220px;
+            }
+          }
+        }
+
+        > .value-about {
+          .value-div > label.value {
+            h3::after {
+              margin-left: 183px;
+            }
+          }
+          .about-div > label.about {
+            h3::after {
+              margin-left: 207px;
+            }
+          }
+        }
+      }
+    }
+
+    section.more-info {
+      padding-top: 20px;
+      > div {
+        h4 {
+          font-size: 12px;
+          font-family: $fontStyle-noto;
+          color: $color-bk;
+        }
+      }
+    }
+    section#copyright {
+      text-align: center;
+      h4 {
+        font-size: 16px;
+        color: $color-rd;
+        font-weight: 600;
+        font-family: $fontStyle-noto;
+        line-height: unset;
+        margin-bottom: unset;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
